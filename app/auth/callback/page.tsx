@@ -71,7 +71,6 @@ function AuthCallbackContent() {
       } catch (err: any) {
         console.error("Failed to create session:", err)
         if (err.message?.includes('session is active')) {
-          console.log("Session already active, redirecting...");
           window.location.href = "/dashboard";
           return;
         }

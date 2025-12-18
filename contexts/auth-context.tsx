@@ -66,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await login(email, password)
   }
 
-  const loginWithGoogle = () => {
+  const loginWithGoogle = async () => {
     const origin = typeof window !== "undefined" ? window.location.origin : ""
     account.createOAuth2Token(OAuthProvider.Google, `${origin}/auth/callback`, `${origin}/login`)
   }
