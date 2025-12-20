@@ -8,7 +8,7 @@ Master SAT vocabulary with interactive flashcards and quizzes.
 - 🎯 Adaptive quizzes to test your knowledge
 - 📊 Track your progress and improvement
 - 🎨 Modern, responsive UI with dark mode
-- 🔐 Secure authentication with Appwrite
+- 🔐 Secure authentication
 
 ## Tech Stack
 
