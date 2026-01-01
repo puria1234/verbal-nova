@@ -78,9 +78,10 @@ export default function DailyChallengePage() {
 
     setSelectedAnswer(answer)
     const isCorrect = answer === dailyWords[currentIndex].definition
+    const newScore = isCorrect ? score + 1 : score
 
     if (isCorrect) {
-      setScore(score + 1)
+      setScore(newScore)
     }
 
     setTimeout(async () => {
@@ -88,31 +89,40 @@ export default function DailyChallengePage() {
         setCurrentIndex(currentIndex + 1)
         setSelectedAnswer(null)
       } else {
-        await completeChallenge()
+        await completeChallenge(newScore)
       }
     }, 1000)
   }
 
-  const completeChallenge = async () => {
+  const completeChallenge = async (finalScore: number) => {
     if (!user) return
 
     const today = new Date().toDateString()
+    const yesterday = new Date(Date.now() - 86400000).toDateString()
     const challengeRef = doc(db, "dailyChallenges", user.uid)
-    const newStreak = score === 5 ? streak + 1 : 0
 
     try {
       const challengeDoc = await getDoc(challengeRef)
+      let newStreak = 1
       
       if (challengeDoc.exists()) {
+        const data = challengeDoc.data()
+        // Continue streak if completed yesterday, otherwise start fresh
+        if (data.lastCompleted === yesterday) {
+          newStreak = (data.streak || 0) + 1
+        }
+        
         await updateDoc(challengeRef, {
           lastCompleted: today,
           streak: newStreak,
-          totalCompleted: (challengeDoc.data().totalCompleted || 0) + 1,
+          lastScore: finalScore,
+          totalCompleted: (data.totalCompleted || 0) + 1,
         })
       } else {
         await setDoc(challengeRef, {
           lastCompleted: today,
           streak: newStreak,
+          lastScore: finalScore,
           totalCompleted: 1,
         })
       }
