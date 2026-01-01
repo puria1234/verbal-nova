@@ -54,11 +54,6 @@ export default function PrivacyPage() {
                 <li>Opt out of data collection</li>
               </ul>
             </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Contact</h2>
-              <p>For privacy concerns, contact us through the app.</p>
-            </section>
           </div>
         </div>
       </div>

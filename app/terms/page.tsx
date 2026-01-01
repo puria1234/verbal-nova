@@ -55,11 +55,6 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-white mb-2">Changes to Terms</h2>
               <p>We may update these terms. Continued use of the service means you accept the updated terms.</p>
             </section>
-
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Contact</h2>
-              <p>Questions about these terms? Contact us through the app.</p>
-            </section>
           </div>
         </div>
       </div>
