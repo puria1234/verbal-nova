@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useAuth } from "@/contexts/firebase-auth-context"
 import { useVocabulary } from "@/hooks/use-vocabulary"
 import { ProtectedRoute } from "@/components/protected-route"
@@ -42,6 +42,18 @@ export default function BattlePage() {
   const [timeLeft, setTimeLeft] = useState(10)
   const [gameOver, setGameOver] = useState(false)
   const [aiDifficulty, setAIDifficulty] = useState<AIDifficulty>("medium")
+  
+  // Refs to track current values in callbacks
+  const currentIndexRef = useRef(currentIndex)
+  const battleWordsRef = useRef(battleWords)
+  
+  useEffect(() => {
+    currentIndexRef.current = currentIndex
+  }, [currentIndex])
+  
+  useEffect(() => {
+    battleWordsRef.current = battleWords
+  }, [battleWords])
   
   // Friend battle state
   const [roomCode, setRoomCode] = useState("")
@@ -221,14 +233,20 @@ export default function BattlePage() {
     if (selectedAnswer || gameOver) return
 
     setSelectedAnswer(answer)
-    const isCorrect = answer === battleWords[currentIndex].definition
+    const idx = currentIndexRef.current
+    const words = battleWordsRef.current
+    const isCorrect = answer === words[idx].definition
 
-    if (isCorrect) setPlayerScore(playerScore + 1)
-    if (Math.random() < getAIAccuracy()) setOpponentScore(opponentScore + 1)
+    if (isCorrect) {
+      setPlayerScore(prev => prev + 1)
+    }
+    if (Math.random() < getAIAccuracy()) {
+      setOpponentScore(prev => prev + 1)
+    }
 
     setTimeout(() => {
-      if (currentIndex < battleWords.length - 1) {
-        setCurrentIndex(currentIndex + 1)
+      if (idx < words.length - 1) {
+        setCurrentIndex(idx + 1)
         setSelectedAnswer(null)
         setTimeLeft(10)
       } else {
@@ -238,15 +256,18 @@ export default function BattlePage() {
   }
 
   const handleAITimeout = () => {
-    if (Math.random() < getAIAccuracy()) setOpponentScore(opponentScore + 1)
-    setTimeout(() => {
-      if (currentIndex < battleWords.length - 1) {
-        setCurrentIndex(currentIndex + 1)
-        setTimeLeft(10)
-      } else {
-        setGameOver(true)
-      }
-    }, 1000)
+    const idx = currentIndexRef.current
+    const words = battleWordsRef.current
+    
+    if (Math.random() < getAIAccuracy()) {
+      setOpponentScore(prev => prev + 1)
+    }
+    if (idx < words.length - 1) {
+      setCurrentIndex(idx + 1)
+      setTimeLeft(10)
+    } else {
+      setGameOver(true)
+    }
   }
 
   const handleFriendAnswer = async (answer: string) => {
