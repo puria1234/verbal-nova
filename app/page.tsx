@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Brain, Trophy, Sparkles, TrendingUp, CheckCircle2, Target, User, LogOut, Menu, Flame, Swords, Users } from "lucide-react"
+import { BookOpen, Brain, Trophy, Sparkles, TrendingUp, CheckCircle2, User, LogOut, Menu, Flame } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { useAuth } from "@/contexts/firebase-auth-context"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -307,26 +307,6 @@ export default function HomePage() {
               <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Daily Challenge</h3>
               <p className="text-gray-300 text-pretty leading-relaxed">
                 Quick 5-word streak challenge perfect for busy students. Build your streak daily!
-              </p>
-            </div>
-
-            <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
-              <div className="mb-4 inline-flex rounded-xl bg-red-500/20 p-4">
-                <Swords className="h-8 w-8 text-red-400" />
-              </div>
-              <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Battle Mode</h3>
-              <p className="text-gray-300 text-pretty leading-relaxed">
-                Compete in timed vocab rounds against AI or challenge friends with join codes.
-              </p>
-            </div>
-
-            <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
-              <div className="mb-4 inline-flex rounded-xl bg-green-500/20 p-4">
-                <Users className="h-8 w-8 text-green-400" />
-              </div>
-              <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Friend Battles</h3>
-              <p className="text-gray-300 text-pretty leading-relaxed">
-                Create a room, share the code, and battle your friends in real-time vocabulary duels.
               </p>
             </div>
           </div>

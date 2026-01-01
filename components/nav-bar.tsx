@@ -31,7 +31,6 @@ export function NavBar() {
   const navItems = [
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/daily-challenge", label: "Daily", icon: Brain },
-    { href: "/battle", label: "Battle", icon: Brain },
     { href: "/flashcards", label: "Flashcards", icon: SquareStack },
     { href: "/quiz", label: "Quiz", icon: Brain },
   ]

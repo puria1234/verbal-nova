@@ -87,25 +87,6 @@ export default function DashboardPage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-balance">Battle Mode</CardTitle>
-                    <CardDescription className="text-pretty">
-                      Battle AI or friends with join codes
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Link href="/battle">
-                      <Button className="w-full bg-red-500 hover:bg-red-600">
-                        <Brain className="mr-2 h-4 w-4" />
-                        Enter Battle
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="grid gap-6 md:grid-cols-2">
-                <Card>
-                  <CardHeader>
                     <CardTitle className="text-balance">Continue Learning</CardTitle>
                     <CardDescription className="text-pretty">
                       Practice with flashcards to expand your vocabulary
@@ -120,7 +101,9 @@ export default function DashboardPage() {
                     </Link>
                   </CardContent>
                 </Card>
+              </div>
 
+              <div className="grid gap-6 md:grid-cols-1">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-balance">Test Your Knowledge</CardTitle>
