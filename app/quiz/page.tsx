@@ -1,17 +1,16 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { useAuth } from "@/contexts/auth-context"
-import { databases, DATABASE_ID, VOCABULARY_COLLECTION_ID } from "@/lib/appwrite"
-import type { VocabularyWord } from "@/lib/types"
+import { useState, useMemo } from "react"
+import { useAuth } from "@/contexts/firebase-auth-context"
+import { useVocabulary, VocabularyWord } from "@/hooks/use-vocabulary"
 import { ProtectedRoute } from "@/components/protected-route"
 import { NavBar } from "@/components/nav-bar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Trophy, RotateCcw } from "lucide-react"
-import { cn, getCookie, setCookie } from "@/lib/utils"
-import { Query } from "appwrite"
+import { Input } from "@/components/ui/input"
+import { Trophy, RotateCcw, Search } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 interface QuizQuestion {
   word: VocabularyWord
@@ -21,60 +20,26 @@ interface QuizQuestion {
 
 export default function QuizPage() {
   const { user } = useAuth()
-  const [words, setWords] = useState<VocabularyWord[]>([])
+  const { words, loading } = useVocabulary()
   const [selectedWordIds, setSelectedWordIds] = useState<string[]>([])
+  const [searchQuery, setSearchQuery] = useState("")
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [score, setScore] = useState(0)
   const [showResult, setShowResult] = useState(false)
-  const [loading, setLoading] = useState(true)
   const [quizStarted, setQuizStarted] = useState(false)
 
-  const loadWords = async () => {
-    try {
-      const limit = 100
-      let offset = 0
-      const allWords: VocabularyWord[] = []
-
-      // Fetch all words in batches
-      while (true) {
-        const response = await databases.listDocuments(DATABASE_ID, VOCABULARY_COLLECTION_ID, [
-          Query.limit(limit),
-          Query.offset(offset),
-        ])
-
-        const batch = response.documents as unknown as VocabularyWord[]
-        if (batch.length === 0) break
-
-        allWords.push(...batch)
-
-        if (batch.length < limit) break
-        offset += limit
-      }
-
-      // Set all words at once to avoid duplicates
-      setWords(allWords)
-      setSelectedWordIds([])
-      setLoading(false)
-    } catch (error) {
-      console.error("[v0] Failed to load quiz:", error)
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    let isMounted = true
-    const fetchWords = async () => {
-      if (isMounted) {
-        await loadWords()
-      }
-    }
-    fetchWords()
-    return () => {
-      isMounted = false
-    }
-  }, [])
+  // Filter words based on search query
+  const filteredWords = useMemo(() => {
+    if (!searchQuery.trim()) return words
+    const query = searchQuery.toLowerCase()
+    return words.filter(
+      (word) =>
+        word.word.toLowerCase().includes(query) ||
+        word.definition.toLowerCase().includes(query)
+    )
+  }, [words, searchQuery])
 
   const buildQuestions = (pool: VocabularyWord[]): QuizQuestion[] => {
     if (pool.length === 0) return []
@@ -96,7 +61,7 @@ export default function QuizPage() {
   }
 
   const startQuiz = () => {
-    const chosen = words.filter((w) => selectedWordIds.includes(w.$id))
+    const chosen = words.filter((w) => selectedWordIds.includes(w.id))
     if (chosen.length === 0) return
     setQuestions(buildQuestions(chosen))
     setQuizStarted(true)
@@ -185,21 +150,32 @@ export default function QuizPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                    <Input
+                      type="text"
+                      placeholder="Search words..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-10 bg-white/5 border-white/20 text-white placeholder:text-gray-400"
+                    />
+                  </div>
+
                   <div className="space-y-3 max-h-[320px] overflow-y-auto pr-2">
-                    {words.map((word) => {
-                      const checked = selectedWordIds.includes(word.$id)
+                    {filteredWords.map((word) => {
+                      const checked = selectedWordIds.includes(word.id)
                       return (
                         <label
-                          key={word.$id}
+                          key={word.id}
                           className="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-3 hover:border-white/20"
                         >
                           <Checkbox
                             checked={checked}
                             onCheckedChange={(val) => {
                               if (val) {
-                                setSelectedWordIds((prev) => [...prev, word.$id])
+                                setSelectedWordIds((prev) => [...prev, word.id])
                               } else {
-                                setSelectedWordIds((prev) => prev.filter((id) => id !== word.$id))
+                                setSelectedWordIds((prev) => prev.filter((id) => id !== word.id))
                               }
                             }}
                           />
@@ -213,15 +189,29 @@ export default function QuizPage() {
                   </div>
 
                   <div className="flex items-center justify-between text-sm text-gray-300">
-                    <span>{selectedWordIds.length} selected</span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-white hover:bg-white/10"
-                      onClick={() => setSelectedWordIds(words.map((w) => w.$id))}
-                    >
-                      Select All
-                    </Button>
+                    <span>{selectedWordIds.length} selected {searchQuery && `(${filteredWords.length} shown)`}</span>
+                    <div className="flex gap-2">
+                      {searchQuery && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-white hover:bg-white/10"
+                          onClick={() => {
+                            setSearchQuery("")
+                          }}
+                        >
+                          Clear Search
+                        </Button>
+                      )}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-white hover:bg-white/10"
+                        onClick={() => setSelectedWordIds(filteredWords.map((w) => w.id))}
+                      >
+                        Select {searchQuery ? "Filtered" : "All"}
+                      </Button>
+                    </div>
                   </div>
 
                   <Button

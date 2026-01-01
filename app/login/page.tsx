@@ -5,7 +5,7 @@ import type React from "react"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "@/contexts/firebase-auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -43,7 +43,26 @@ export default function LoginPage() {
       await login(email, password)
       router.push("/dashboard")
     } catch (err: any) {
-      setError(err.message || "Failed to log in")
+      const errorCode = err.code
+      let errorMessage = "Failed to log in"
+      
+      if (errorCode === "auth/invalid-credential") {
+        errorMessage = "Invalid email or password. Please check your credentials and try again."
+      } else if (errorCode === "auth/user-not-found") {
+        errorMessage = "No account found with this email. Please sign up first."
+      } else if (errorCode === "auth/wrong-password") {
+        errorMessage = "Incorrect password. Please try again."
+      } else if (errorCode === "auth/invalid-email") {
+        errorMessage = "Invalid email address format."
+      } else if (errorCode === "auth/user-disabled") {
+        errorMessage = "This account has been disabled."
+      } else if (errorCode === "auth/too-many-requests") {
+        errorMessage = "Too many failed login attempts. Please try again later."
+      } else if (err.message) {
+        errorMessage = err.message
+      }
+      
+      setError(errorMessage)
     } finally {
       setLoading(false)
     }

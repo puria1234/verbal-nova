@@ -1,50 +1,17 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { useAuth } from "@/contexts/auth-context"
-import { databases, DATABASE_ID, USER_PROGRESS_COLLECTION_ID } from "@/lib/appwrite"
+import { useAuth } from "@/contexts/firebase-auth-context"
+import { useProgressStats } from "@/hooks/use-progress"
 import { ProtectedRoute } from "@/components/protected-route"
 import { NavBar } from "@/components/nav-bar"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { BookOpen, Brain, TrendingUp } from "lucide-react"
-import { Query } from "appwrite"
 
 export default function DashboardPage() {
   const { user } = useAuth()
-  const [stats, setStats] = useState({
-    totalStudied: 0,
-    knownWords: 0,
-  })
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    if (user) {
-      loadStats()
-    }
-  }, [user])
-
-  const loadStats = async () => {
-    try {
-      // Fetch user progress from Appwrite
-      const progressResponse = await databases.listDocuments(DATABASE_ID, USER_PROGRESS_COLLECTION_ID, [
-        Query.equal("userId", user!.$id),
-      ])
-
-      const totalStudied = progressResponse.documents.length
-      const knownWords = progressResponse.documents.filter((doc: any) => doc.known).length
-
-      setStats({
-        totalStudied,
-        knownWords,
-      })
-    } catch (error) {
-      console.error("[v0] Failed to load stats:", error)
-    } finally {
-      setLoading(false)
-    }
-  }
+  const { stats, loading } = useProgressStats()
 
   return (
     <ProtectedRoute>
@@ -53,8 +20,8 @@ export default function DashboardPage() {
 
         <main className="container mx-auto px-4 py-8">
           <div className="mb-8">
-            <h1 className="mb-2 text-3xl font-bold text-balance">Welcome back, {user?.name}!</h1>
-            <p className="text-muted-foreground text-pretty">Track your progress and continue learning.</p>
+            <h1 className="mb-2 text-2xl sm:text-3xl font-bold text-balance">Welcome back, {user?.displayName}!</h1>
+            <p className="text-sm sm:text-base text-muted-foreground text-pretty">Track your progress and continue learning.</p>
           </div>
 
           {loading ? (
@@ -96,6 +63,42 @@ export default function DashboardPage() {
                       {stats.totalStudied > 0 ? Math.round((stats.knownWords / stats.totalStudied) * 100) : 0}%
                     </div>
                     <p className="text-xs text-muted-foreground">Words mastered</p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2 mb-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-balance">Daily Challenge</CardTitle>
+                    <CardDescription className="text-pretty">
+                      Quick 5-word streak challenge
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link href="/daily-challenge">
+                      <Button className="w-full">
+                        <Brain className="mr-2 h-4 w-4" />
+                        Start Challenge
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-balance">Battle Mode</CardTitle>
+                    <CardDescription className="text-pretty">
+                      Battle AI or friends with join codes
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link href="/battle">
+                      <Button className="w-full bg-red-500 hover:bg-red-600">
+                        <Brain className="mr-2 h-4 w-4" />
+                        Enter Battle
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </div>

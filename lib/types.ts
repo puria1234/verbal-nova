@@ -1,11 +1,12 @@
 export interface VocabularyWord {
-  $id: string
+  _id: string
   word: string
   definition: string
 }
 
 export interface UserProgress {
-  $id: string
+  _id: string
+  userId: string
   wordId: string
   mastered?: boolean
   known?: boolean
@@ -14,7 +15,7 @@ export interface UserProgress {
 }
 
 export interface QuizResult {
-  $id: string
+  _id: string
   userId: string
   score: number
   totalQuestions: number
@@ -22,8 +23,8 @@ export interface QuizResult {
 }
 
 export interface User {
-  $id: string
-  email: string
-  name: string
-  prefs?: Record<string, any>
+  _id: string
+  email?: string
+  name?: string
+  image?: string
 }

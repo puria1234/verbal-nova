@@ -1,0 +1,992 @@
+word,definition
+Abandon,To give up completely or leave behind
+Abate,To reduce in intensity or amount
+Ability,The capacity or skill to do something
+Abjure,To formally renounce or reject a belief or claim
+Abridge,To shorten or condense
+Abrupt,Sudden and unexpected
+Abscond,To leave secretly and hide oneself
+Absorb,To take in or soak up
+Abstain,To refrain from doing something
+Abstract,Theoretical rather than concrete; to summarize
+Abstruse,Difficult to understand; obscure
+Abysmal,Extremely bad or appalling
+Academic,Related to education or scholarship; theoretical
+Accept,To receive or agree to something
+Acceptable,Satisfactory or adequate
+Accessible,Easy to approach or obtain
+Accidental,Happening by chance; unintentional
+Accommodate,To provide space or adapt to suit
+Accompany,To go along with
+Accomplish,To complete successfully
+Accuracy,The quality of being correct or precise
+Accurate,Correct and precise
+Acerbic,Sharp and harsh in tone or manner
+Achieve,To successfully reach a goal
+Acknowledge,To recognize or admit the existence of something
+Acquiesce,To accept reluctantly but without protest
+Acquire,To obtain or gain possession of
+Acquired,Obtained or learned
+Action,The process of doing something
+Active,Engaged in activity; energetic
+Actual,Real or existing in fact
+Adapt,To adjust to new conditions
+Address,To deal with or speak to
+Adept,Highly skilled or proficient
+Adequate,Sufficient for a specific requirement
+Adhere,To stick firmly to; to follow closely
+Adjust,To alter or modify slightly
+Admire,To regard with respect or approval
+Admonish,To warn or reprimand gently
+Adulation,Excessive admiration or praise
+Advance,To move forward or make progress
+Advantage,A favorable circumstance or benefit
+Advantageous,Providing a benefit or favorable position
+Advent,The arrival of something important
+Adversarial,Involving conflict or opposition
+Advice,Guidance or recommendations offered
+Advise,To give guidance or recommendations
+Advocate,To publicly support or recommend
+Aesthetic,Concerned with beauty or artistic taste
+Affectation,Artificial behavior designed to impress
+Affluent,Wealthy or having abundant resources
+Aggrandize,To increase power or reputation often excessively
+Aggravate,To make worse or more severe
+Aggressive,Forceful or attacking in nature
+Agree,To have the same opinion or come to consensus
+Agriculture,The practice of farming and cultivation
+Alacrity,Cheerful readiness or eagerness
+Allow,To permit or give permission
+Allude,To refer to indirectly
+Aloof,Distant and detached; unfriendly
+Alternative,Another option or choice
+Ambiguity,Uncertainty or vagueness in meaning
+Ambiguous,Open to multiple interpretations; unclear
+Ambivalence,Having mixed feelings about something
+Ambivalent,Having conflicting feelings simultaneously
+Ameliorate,To make better or improve
+Amount,A quantity of something
+Amplify,To increase in size or intensity
+Amusing,Entertaining or causing laughter
+Anachronistic,Belonging to a different time period; outdated
+Analogous,Comparable or similar in certain respects
+Analyze,To examine in detail
+Ancient,Very old; from the distant past
+Animal,A living organism that feeds on organic matter
+Animate,To bring to life or make lively
+Animosity,Strong hostility or hatred
+Annotate,To add explanatory notes
+Announce,To make a public declaration
+Annual,Occurring once a year
+Anomaly,Something that deviates from what is normal
+Answer,A response to a question or solution to a problem
+Antagonistic,Showing opposition or hostility
+Antagonize,To provoke hostility or anger
+Antecedent,Something that comes before; a precursor
+Anticipate,To expect or predict
+Antipathy,A strong feeling of dislike
+Antipodal,Diametrically opposite
+Antithesis,The direct opposite
+Apathetic,Showing no interest or concern
+Apex,The highest point or peak
+Apocryphal,Of doubtful authenticity
+Apotheosis,The highest or perfect example of something
+Apparent,Clearly visible or understood; seeming
+Appeal,To make a request or be attractive
+Appear,To become visible or seem
+Apply,To put to use or make a request
+Appreciate,To recognize value or be grateful
+Apprehensive,Anxious or fearful about the future
+Approach,To come near or a method of dealing with something
+Appropriate,Suitable for a particular purpose
+Approximate,Close to the actual but not exact
+Arbitrary,Based on random choice rather than reason
+Arcane,Mysterious or known only to few
+Archaic,Very old or outdated
+Architecture,The art and science of building design
+Arduous,Difficult and requiring much effort
+Area,A region or extent of space
+Argue,To present reasons for or against something
+Arrange,To organize or put in order
+Arrive,To reach a destination
+Article,A piece of writing or an item
+Articulate,To express clearly or well-spoken
+Artless,Without pretense; natural and simple
+Ascetic,Characterized by severe self-discipline
+Asperity,Harshness of tone or manner
+Assemble,To gather together or construct
+Assertion,A confident statement of fact or belief
+Assiduous,Showing great care and perseverance
+Assist,To help or support
+Associate,To connect or link together
+Assume,To suppose without proof
+Assure,To make certain or promise confidently
+Atmosphere,The mood or air surrounding the Earth
+Attach,To fasten or join
+Attempt,To try or make an effort
+Attention,Notice or focus on something
+Austere,Severe or strict in manner; simple
+Authority,The power or right to give orders
+Automatic,Operating without conscious thought or effort
+Autonomous,Independent and self-governing
+Available,Able to be used or obtained
+Avarice,Extreme greed for wealth
+Average,The typical amount or ordinary
+Avid,Enthusiastic or eager
+Avoid,To keep away from or prevent
+Award,To give as a prize or honor
+Background,The circumstances or setting behind something
+Balance,A state of equilibrium
+Basic,Fundamental or essential
+Beatific,Displaying blissful happiness
+Become,To begin to be or grow into
+Begin,To start or commence
+Behavior,The way one acts or conducts oneself
+Believe,To accept as true or have faith in
+Bellicose,Aggressive and eager to fight
+Beneficial,Producing good or helpful results
+Benefit,An advantage or profit gained
+Benevolent,Kind and well-meaning
+Better,Of higher quality or more desirable
+Bifurcate,To divide into two branches
+Blandishment,Flattery intended to persuade
+Bogus,Fake or fraudulent
+Bold,Confident and courageous
+Bombastic,Pompous and inflated in speech
+Border,A boundary or edge
+Borrow,To take temporarily with intent to return
+Bowdlerize,To remove material considered improper
+Broadcast,To transmit widely
+Bucolic,Relating to pleasant rural life
+Budget,A financial plan or amount of money available
+Build,To construct or develop
+Business,Commercial activity or enterprise
+Buttress,To support or strengthen
+Bypass,To go around or avoid
+Byzantine,Excessively complicated or devious
+Cabal,A secret group engaged in plotting
+Cacophony,A harsh mixture of discordant sounds
+Calculate,To compute or determine mathematically
+Calibrate,To adjust precisely for accuracy
+Calumny,False statements intended to damage reputation
+Campaign,An organized course of action to achieve a goal
+Candid,Honest and straightforward
+Candor,The quality of being open and honest
+Capable,Having the ability or capacity to do something
+Capacity,The maximum amount that can be contained or ability
+Capitulate,To surrender or give in
+Capricious,Unpredictable and subject to whim
+Capture,To take into custody or catch
+Career,An occupation or profession
+Careful,Taking care to avoid harm or error
+Carelessly,In a manner showing lack of attention
+Castigate,To criticize severely
+Catastrophic,Involving extreme disaster or destruction
+Category,A class or division of things
+Cathartic,Providing emotional release or relief
+Cause,Something that produces an effect or reason
+Caustic,Corrosive or sarcastic and cutting
+Celerity,Swiftness of movement
+Center,The middle point or focus
+Certain,Sure or definite
+Challenge,A demanding task or call to compete
+Change,To make or become different
+Character,The distinctive nature of something or moral qualities
+Characterization,The description of distinctive qualities
+Charlatan,A person falsely claiming special knowledge
+Chastise,To rebuke or punish
+Chicanery,Deception by trickery
+Chimerical,Highly unrealistic or fantastical
+Choice,An act of selecting or option available
+Choose,To select from alternatives
+Circuitous,Indirect and roundabout
+Circumspect,Cautious and unwilling to take risks
+Circumstance,A fact or condition connected with an event
+Circumvent,To find a way around or evade
+Citizen,A member of a country or state
+Clandestine,Kept secret or done secretly
+Clear,Easy to perceive or understand; obvious
+Climate,The prevailing weather conditions or general attitude
+Coerce,To persuade by force or threats
+Cogent,Clear logical and convincing
+Cogitate,To think deeply about something
+Coherent,Logical and consistent
+Coincidence,A remarkable occurrence of events by chance
+Collaboration,Working together toward a common goal
+Colleague,A person with whom one works
+Collect,To gather or accumulate
+Commemorate,To honor the memory of
+Commence,To begin or start
+Comment,A remark expressing opinion or observation
+Commercialization,The process of managing for financial profit
+Commission,An instruction or authority to perform a task
+Committed,Dedicated to a cause or activity
+Common,Occurring frequently or shared by many
+Communicate,To share or exchange information
+Community,A group sharing common characteristics or location
+Compare,To examine for similarities and differences
+Compelling,Evoking strong interest or convincing
+Compensation,Payment for services or something that makes up for loss
+Competent,Having sufficient skill or ability
+Complacent,Self-satisfied and unaware of potential danger
+Complaisant,Willing to please others
+Complementary,Combining to enhance or complete
+Complete,Having all necessary parts or to finish
+Complexity,The state of being intricate or complicated
+Compliant,Disposed to agree or obey
+Compose,To create or write; to constitute
+Compound,Consisting of multiple elements or to make worse
+Comprise,To consist of or be made up of
+Compunction,A feeling of guilt or moral scruple
+Computer,An electronic device for processing data
+Conceal,To hide or keep secret
+Concede,To admit that something is true
+Conceive,To form an idea or become pregnant
+Concept,An abstract idea or general notion
+Conceptualize,To form a concept or idea about
+Concerning,Causing worry or relating to
+Conciliatory,Intended to make peace or reconcile
+Conclude,To bring to an end or reach a judgment
+Concur,To agree or happen simultaneously
+Condition,The state of something or a requirement
+Condone,To accept behavior that is considered wrong
+Conduct,To organize or carry out; behavior
+Confident,Having self-assurance
+Confirm,To establish the truth or verify
+Conflagration,A large and destructive fire
+Conflated,Combined or merged into one
+Conflict,A serious disagreement or incompatibility
+Conform,To comply with rules or standards
+Conjecture,An opinion based on incomplete information
+Connect,To join or link together
+Consensus,General agreement
+Consequence,A result or effect of an action
+Conservative,Averse to change; traditional
+Consider,To think carefully about
+Consist,To be composed of
+Consistent,Acting in the same way over time
+Conspicuous,Clearly visible or attracting attention
+Constant,Unchanging or continuous
+Constituent,A component part or a voting member
+Constitution,The composition or fundamental principles
+Construct,To build or form by putting parts together
+Consume,To use up or eat and drink
+Contact,Communication or touching
+Contain,To have inside or keep under control
+Contemn,To treat with contempt
+Contemporary,Belonging to the same time period; modern
+Contend,To assert or compete
+Content,Satisfied or the substance contained
+Contentious,Causing disagreement or argument
+Context,The circumstances surrounding something
+Contingent,Dependent on circumstances
+Continue,To persist or carry on
+Contract,An agreement or to become smaller
+Contradict,To assert the opposite of a statement
+Contribute,To give in order to help achieve something
+Contrite,Feeling remorseful
+Contrive,To create or devise cleverly
+Contrived,Deliberately created; artificial
+Control,The power to influence or regulate
+Controversial,Causing disagreement or discussion
+Controversy,Prolonged public disagreement
+Conventional,Based on accepted standards; traditional
+Convince,To cause someone to believe something
+Convivial,Friendly and lively; sociable
+Convoluted,Extremely complex and difficult to follow
+Coordinate,To organize or work together harmoniously
+Cordially,In a warm and friendly manner
+Corpulent,Excessively overweight
+Correct,Free from error or to make right
+Correlation,A mutual relationship or connection
+Correspond,To be similar or communicate by exchange
+Corroborate,To confirm or support with evidence
+Costly,Expensive or involving sacrifice
+Counteract,To act against to reduce force or effect
+Craven,Contemptibly lacking in courage
+Create,To bring into existence
+Credible,Able to be believed; convincing
+Criterion,A standard for judging or deciding
+Critical,Expressing adverse or important judgments
+Criticize,To indicate faults or judge unfavorably
+Cryptic,Having hidden meaning; mysterious
+Cultivate,To prepare for growing crops or develop
+Culture,The customs and achievements of a society
+Cupidity,Greed for money or possessions
+Cursory,Hasty and superficial
+Cynical,Believing people are motivated by self-interest
+Daunting,Intimidating or discouraging
+Dearth,A scarcity or lack of something
+Debilitate,To weaken or enfeeble
+Debunk,To expose falseness or exaggeration
+Decade,A period of ten years
+Deceptive,Misleading or giving a false impression
+Decide,To make a choice or reach a conclusion
+Deciding,Settling an issue or making a determination
+Decisive,Settling an issue or showing determination
+Decline,To decrease or politely refuse
+Decorum,Behavior that is proper and dignified
+Decrease,To become or make smaller
+Defend,To protect from harm or argue in support
+Deference,Respectful submission to another's wishes
+Deficient,Lacking in something essential
+Define,To state the meaning of or describe exactly
+Defunct,No longer existing or functioning
+Delegate,To entrust a task to another
+Deleterious,Causing harm or damage
+Deliberation,Careful consideration or discussion
+Delicate,Fragile or requiring sensitive handling
+Demagogue,A political leader who seeks support by appealing to prejudices
+Demarcate,To set the boundaries of
+Demonstrate,To show clearly by evidence or example
+Demur,To raise doubts or object
+Denigrate,To criticize unfairly; disparage
+Depend,To rely on or be determined by
+Deplete,To use up or reduce in number
+Deprecate,To express disapproval of
+Deride,To mock or ridicule
+Derivative,Imitative or obtained from another source
+Derive,To obtain from a source
+Derived,Obtained or developed from a source
+Describe,To give an account of in words
+Desiccated,Dried out or lacking vitality
+Design,A plan or purpose; to create
+Despise,To regard with contempt or hatred
+Despot,A ruler with absolute power typically oppressive
+Desultory,Lacking purpose or enthusiasm; disconnected
+Determine,To establish precisely or cause to occur
+Detrimental,Tending to cause harm
+Develop,To grow or cause to grow
+Deviate,To depart from an established course
+Devise,To plan or invent
+Diatribe,A forceful verbal attack
+Didactic,Intended to teach or preach
+Difference,A point of dissimilarity
+Different,Not the same as another
+Diffidence,Modesty or shyness from lack of confidence
+Digress,To depart from the main subject
+Dilatory,Slow and intended to cause delay
+Dilettante,A person with superficial interest in a subject
+Diligent,Showing careful and persistent effort
+Dimension,A measurable extent or aspect
+Diminish,To make or become less
+Direct,Extending in a straight line or clear and explicit
+Directed,Guided or aimed toward a target
+Disabuse,To free someone from a mistaken belief
+Disagreement,Lack of consensus or harmony
+Disaster,A sudden event causing great damage
+Disastrous,Causing great damage or highly unsuccessful
+Disconcerting,Causing one to feel unsettled
+Discord,Disagreement or lack of harmony
+Discordant,Disagreeing or harsh and jarring
+Discount,To disregard or reduce in price
+Discourage,To cause to lose confidence or advise against
+Discover,To find unexpectedly or become aware of
+Discreet,Careful to avoid attention; prudent
+Discrepancy,A lack of compatibility or difference
+Discretion,The quality of behaving carefully; freedom to decide
+Discrimination,Unjust treatment or recognition of distinctions
+Discuss,To talk about something in detail
+Disdain,The feeling that something is unworthy; to regard with contempt
+Disengage,To separate or detach from
+Disingenuous,Not sincere or candid
+Dismiss,To send away or treat as unworthy of consideration
+Disorienting,Causing confusion about direction or position
+Disparage,To regard as being of little worth
+Disparate,Essentially different; containing distinct elements
+Dispute,A disagreement or to question validity
+Dissemble,To conceal one's true motives or feelings
+Disseminate,To spread widely
+Dissolution,The closing down or breaking apart
+Distance,The amount of space between things or aloofness
+Distinct,Recognizably different or clearly defined
+Distinction,A difference or excellence that sets apart
+Distract,To prevent concentration by diverting attention
+Distressed,Suffering anxiety or in poor condition
+Distribute,To give out shares of or spread over an area
+Diverge,To separate and go different ways
+Diverse,Showing variety; different from each other
+Divide,To separate into parts
+Document,A written record or to record in detail
+Doggerel,Comic verse of irregular measure
+Dogmatic,Inclined to lay down principles as undeniably true
+Dominance,Power and influence over others
+Dormant,Temporarily inactive
+Doughty,Brave and persistent
+Dubious,Hesitating or doubtful; suspicious
+Dulcet,Sweet and soothing
+Duplicity,Deceitfulness; double-dealing
+Dynamic,Characterized by constant change or energy
+Earnest,Showing sincere conviction
+Ebullient,Cheerful and full of energy
+Eccentric,Unconventional and slightly strange
+Eclectic,Deriving ideas from various sources
+Eclipse,To obscure or surpass
+Economy,The system of production and consumption or careful management
+Education,The process of teaching or learning
+Effect,A result or to bring about
+Efficacious,Successful in producing a desired result
+Effort,A vigorous attempt
+Effrontery,Insolent or impertinent behavior
+Egalitarian,Believing in equal rights for all
+Egregious,Outstandingly bad; shocking
+Elaborate,Involving many careful details or to develop with detail
+Elated,Extremely happy and excited
+Element,A component or essential part
+Eliminate,To completely remove or get rid of
+Eloquent,Fluent and persuasive in speaking or writing
+Elucidate,To make something clear; explain
+Elude,To evade or escape from
+Elusive,Difficult to find catch or achieve
+Emerge,To become apparent or move out of
+Emphasis,Special importance or stress given to something
+Emphasize,To give special importance to
+Empirical,Based on observation or experience
+Emulate,To match or surpass through imitation
+Enable,To make possible or provide means
+Encompass,To include comprehensively or surround
+Encounter,To meet unexpectedly or an unexpected meeting
+Encourage,To give support or confidence
+Endorse,To declare approval or support
+Enduring,Lasting over a long period
+Energy,The capacity for doing work or vigor
+Enervate,To weaken or drain of energy
+Enhance,To increase quality value or extent
+Enigmatic,Mysterious and difficult to understand
+Entail,To involve as a necessary part or consequence
+Environment,The surroundings or conditions in which one operates
+Ephemeral,Lasting for a very short time
+Equal,Being the same in quantity or having same status
+Equanimity,Mental calmness and composure
+Equipment,The necessary items for a particular purpose
+Equipoise,Balance or equilibrium
+Equivalent,Equal in value amount or meaning
+Equivocal,Open to more than one interpretation; ambiguous
+Erratic,Unpredictable and inconsistent
+Erroneous,Wrong or incorrect
+Ersatz,Artificial and inferior substitute
+Erstwhile,Former or previous
+Erudite,Having great knowledge or learning
+Esoteric,Intended for a small group with specialized knowledge
+Establish,To set up or achieve recognition
+Estimate,An approximate calculation or to judge roughly
+Estrange,To cause to be no longer friendly
+Ethereal,Extremely delicate and light; heavenly
+Euphemism,A mild expression substituted for a harsh one
+Evaluate,To assess the value or quality of
+Evanescent,Quickly fading or disappearing
+Eventually,In the end or at some future time
+Evidence,Information indicating whether something is true
+Evident,Plain or obvious
+Evince,To reveal the presence of a quality
+Evoke,To bring a feeling or memory to mind
+Exacerbate,To make a problem worse
+Exactitude,The quality of being exact
+Exaggerate,To represent as greater than reality
+Examine,To inspect closely or test knowledge
+Example,A thing characteristic of its kind or illustrating a rule
+Exceed,To go beyond a limit
+Exclude,To deny access or leave out
+Exculpate,To clear from blame
+Exemplify,To be a typical example of
+Exercise,Activity requiring physical effort or to use
+Exhaustive,Comprehensive and thorough
+Exhilarating,Making one feel very happy or energized
+Exigent,Pressing and demanding
+Exonerate,To absolve from blame
+Expand,To become or make larger
+Expansion,The action of becoming larger
+Expatiate,To speak or write at length
+Expeditious,Done with speed and efficiency
+Expensive,Costing a lot of money
+Experience,Practical contact or knowledge gained
+Experiment,A scientific procedure or to try something new
+Expiate,To make amends for guilt or wrongdoing
+Explain,To make clear by describing in detail
+Explicable,Able to be explained
+Exploit,To make use of or use unfairly for gain
+Express,To convey in words or by gestures; explicit
+Extend,To make longer or offer
+Extensive,Covering a large area; comprehensive
+Extraneous,Irrelevant or unrelated to the subject
+Extravagant,Lacking restraint; excessive or elaborate
+Fabricate,To invent or construct
+Facilitate,To make an action easier
+Factor,A circumstance contributing to a result
+Fallacious,Based on mistaken belief or faulty reasoning
+Fastidious,Very attentive to detail; hard to please
+Fatuous,Silly and pointless
+Feasible,Possible to accomplish
+Feature,A distinctive attribute or to present prominently
+Feckless,Lacking initiative or strength of character
+Federal,Relating to a system of central government
+Felicitous,Well-chosen or apt; pleasing
+Feral,Wild or existing in natural state
+Fervent,Displaying passionate intensity
+Flaccid,Soft and limp; lacking vigor
+Flagrant,Conspicuously offensive
+Fluctuate,To vary irregularly
+Focus,The center of interest or to concentrate attention
+Foretell,To predict the future
+Formidable,Inspiring fear or respect through size or power
+Fortuitous,Happening by chance especially fortunately
+Foster,To encourage development of
+Foundation,The underlying basis or structure
+Fragile,Easily broken or damaged
+Frivolous,Not serious or sensible
+Fruitless,Failing to achieve desired results
+Function,The purpose or to work or operate
+Fundamental,Forming a necessary base or core; essential
+Fustian,Pompous or pretentious speech or writing
+Futile,Incapable of producing useful result
+Gainsay,To deny or contradict
+Gamut,The complete range or scope
+Garrulous,Excessively talkative
+Generate,To cause to arise or produce
+Genuine,Truly what it is said to be; authentic
+Germane,Relevant to the subject under consideration
+Goal,The object of a person's ambition or effort
+Grandiloquent,Pompous or extravagant in language
+Grandiose,Impressive or extravagantly ambitious
+Grapple,To struggle or wrestle with
+Gregarious,Fond of company; sociable
+Group,A number of things located or classed together
+Guile,Sly or cunning intelligence
+Habitual,Done regularly or as a habit
+Hackneyed,Overused and lacking originality
+Halcyon,Denoting a peaceful and happy time
+Haphazard,Lacking organization or planning
+Hapless,Unfortunate or unlucky
+Harridan,A strict or belligerent older woman
+Hegemony,Leadership or dominance by one group
+Hibernation,A state of inactivity during winter
+Highlight,To emphasize or the most outstanding part
+Hinder,To create difficulties resulting in delay
+Histrionic,Overly theatrical or dramatic
+Hoard,To accumulate and hide away
+Homogeneous,Of the same kind; uniform
+Hypothesis,A proposed explanation based on limited evidence
+Hypothesize,To propose an explanation
+Hypothetical,Based on assumption rather than fact
+Iconoclast,A person who attacks cherished beliefs
+Idiosyncratic,Peculiar to an individual
+Ignominious,Deserving or causing public disgrace
+Illusory,Based on illusion; not real
+Imaginative,Having creative ability
+Imbibe,To drink or absorb ideas
+Imitation,A copy or the action of imitating
+Imminent,About to happen
+Immune,Resistant to infection or protected from
+Immutable,Unchanging over time
+Impartial,Treating all equally; fair
+Impeccable,Without fault or error
+Impecunious,Having little or no money
+Impede,To delay or obstruct progress
+Impending,About to happen; imminent
+Impenetrable,Impossible to pass through or understand
+Imperceptible,Too slight to be noticed
+Imperious,Arrogant and domineering
+Imperturbable,Unable to be upset or disturbed
+Impervious,Unable to be affected by or penetrated
+Implacable,Unable to be placated or appeased
+Implement,To put a plan into effect or a tool
+Implication,A conclusion that can be drawn or involvement
+Implicit,Suggested though not directly expressed
+Important,Of great significance or value
+Importune,To harass with persistent requests
+Impractical,Not adapted for use or not sensible
+Improvident,Not providing for the future; wasteful
+Improvise,To create spontaneously without preparation
+Impugn,To dispute the truth or validity of
+Impulsive,Acting without forethought
+Inactive,Not engaging in activity
+Inadequate,Not sufficient or good enough
+Inadvertently,Without intention; accidentally
+Incessant,Continuing without pause or interruption
+Inchoate,Just begun and not fully formed
+Incisive,Showing clear thought and understanding
+Incite,To encourage or stir up
+Include,To contain as part of a whole
+Incompetent,Not having necessary skills or ability
+Incongruous,Not in harmony or out of place
+Inconspicuous,Not clearly visible or attracting attention
+Incorporate,To include as part of a whole
+Increase,To become or make greater
+Indecipherable,Impossible to read or understand
+Indefatigable,Persisting tirelessly
+Indicate,To point out or state briefly
+Indifference,Lack of interest or concern
+Indifferent,Having no particular interest; neutral
+Indigence,A state of extreme poverty
+Indigent,Poor or needy
+Indisputable,Unable to be challenged or denied
+Indistinct,Not clear or sharply defined
+Individual,A single person or thing; distinctive
+Indolent,Lazy or avoiding activity
+Indubitable,Impossible to doubt; unquestionable
+Indulge,To allow oneself to enjoy or satisfy a desire
+Ineffable,Too great to be expressed in words
+Ineffectual,Not producing desired effect
+Inevitable,Certain to happen; unavoidable
+Inexorable,Impossible to stop or prevent
+Inexpensive,Not costing much money
+Inexplicable,Unable to be explained
+Inextricable,Impossible to disentangle or escape from
+Influence,The capacity to affect character or behavior
+Infrequent,Not occurring often; rare
+Ingenuous,Innocent and unsuspecting
+Inhibit,To restrain or hinder
+Inimical,Tending to obstruct or harm
+Inimitable,Impossible to imitate; unique
+Innocuous,Not harmful or offensive
+Innovative,Introducing new ideas or methods
+Inscrutable,Impossible to understand or interpret
+Insensible,Without sensation or unaware
+Insidious,Proceeding in a subtle way but with harmful effects
+Insignificant,Too small or unimportant to be worth consideration
+Insipid,Lacking flavor or vigor
+Insolent,Showing rude disrespect
+Inspect,To examine closely
+Inspirational,Providing motivation or creative stimulation
+Instigate,To initiate or provoke
+Intangible,Unable to be touched; not concrete
+Integrity,The quality of being honest and having strong moral principles
+Intentional,Done on purpose; deliberate
+Interchangeable,Able to be exchanged with each other
+Interject,To say something abruptly
+Interpret,To explain the meaning of
+Intersect,To cross or cut across each other
+Interval,A pause or space between things
+Intransigent,Unwilling to change views or compromise
+Intrepid,Fearless and adventurous
+Intricate,Very complicated or detailed
+Intriguing,Arousing curiosity or interest
+Inundate,To overwhelm with things to deal with
+Invalidate,To make invalid or disprove
+Invent,To create or design something new
+Investigation,A systematic inquiry or examination
+Involuntarily,Done without conscious control
+Irascible,Easily angered
+Irrefutable,Impossible to deny or disprove
+Irrelevant,Not connected or appropriate to the matter
+Isolate,To set apart from others
+Jejune,Naive or simplistic; dull
+Jettison,To abandon or discard
+Jocular,Fond of joking; humorous
+Judicious,Having good judgment or sense
+Justify,To show to be right or provide reasons for
+Lacking,Not having enough of something
+Laconic,Using very few words; concise
+Languid,Displaying lack of effort or energy
+Latent,Existing but not yet developed or manifest
+Legislation,Laws collectively or the process of making laws
+Legitimate,Conforming to rules or laws; valid
+Localized,Restricted to a particular place
+Lucrative,Producing a great deal of profit
+Lugubrious,Looking or sounding sad and dismal
+Magnanimous,Generous and forgiving
+Maintain,To keep in existence or assert
+Maladroit,Ineffective or clumsy
+Malevolent,Having evil intentions toward others
+Malign,To speak critically and falsely about
+Manageable,Able to be controlled or dealt with
+Mandatory,Required by law or rules; compulsory
+Mendacious,Not telling the truth; lying
+Meretricious,Apparently attractive but having no real value
+Methodology,A system of methods used in a particular field
+Meticulous,Showing great attention to detail
+Mimic,To imitate or copy closely
+Minimize,To reduce to the smallest possible amount
+Misanthropic,Having dislike of humankind
+Misrepresent,To give false or misleading account of
+Mitigate,To make less severe or serious
+Moderate,Average in amount or avoiding extremes
+Modify,To make partial changes to
+Motivation,The reason for acting or behaving in a particular way
+Multifaceted,Having many aspects or features
+Mundane,Lacking interest or excitement; ordinary
+Myopic,Lacking foresight or showing narrow perspective
+Naive,Showing lack of experience or judgment
+Neglect,To fail to care for properly
+Neutrality,The state of being impartial or unbiased; not supporting either side in a conflict or dispute
+Newfound,Recently discovered or acquired; newly obtained
+Notional,Existing only in theory or as an idea; hypothetical rather than actual
+Novel,New and original; not resembling something formerly known or used
+Nuanced,Characterized by subtle distinctions or variations; showing careful attention to detail
+Obdurate,Stubbornly refusing to change one's opinion or course of action; hardened against persuasion
+Objective,Based on observable facts rather than feelings or opinions; impartial
+Obligate,To bind legally or morally; to require or compel
+Obscure,Not discovered or known about; uncertain or difficult to understand
+Obsequious,Obedient or attentive to an excessive or servile degree; fawning
+Observable,Able to be noticed or perceived; detectable
+Observant,Quick to notice things; paying close attention to details
+Obsolete,No longer produced or used; out of date
+Obstinate,Stubbornly refusing to change one's opinion or chosen course of action
+Obstructed,Blocked or hindered; prevented from making progress
+Obtain,To acquire or secure; to come into possession of
+Obviously,In a way that is easily perceived or understood; clearly
+Occupy,To reside or have one's place in; to fill or take up (space or time)
+Occurrence,An instance or event of something happening
+Oddity,A strange or peculiar person thing or trait
+Offhand,Without previous thought or consideration; casual or informal
+Omit,To leave out or exclude; to fail to include or mention
+Omnipotent,Having unlimited power; able to do anything
+Onerous,Involving a great deal of effort trouble or difficulty; burdensome
+Onset,The beginning or start of something especially something unpleasant
+Opaque,Not able to be seen through; not transparent or translucent
+Operative,Functioning; having effect or influence
+Option,A thing that is or may be chosen; an alternative course of action
+Ornamental,Serving as decoration; not having a practical purpose
+Ostentatious,Characterized by vulgar or pretentious display; designed to impress
+Oust,To drive out or expel from a position or place
+Outstrip,To move faster than and overtake; to exceed or surpass
+Overcome,To succeed in dealing with a problem or difficulty; to defeat
+Overlook,To fail to notice; to ignore or disregard
+Overreact,To respond more emotionally or forcibly than is justified
+Overshadow,To cast a shadow over; to make seem less important by comparison
+Overtly,In an open and observable manner; not secretly or hidden
+Overwhelmed,Buried or drowned beneath a huge mass; having too much to deal with
+Palliate,To make a disease or its symptoms less severe without removing the cause; to alleviate
+Palpable,Able to be touched or felt; so intense as to be almost touched or felt
+Paradigm,A typical example or pattern of something; a model or framework
+Paradox,A seemingly absurd or contradictory statement that may nonetheless be true
+Paragon,A person or thing regarded as a perfect example of a particular quality
+Parameter,A limit or boundary that defines the scope of a process or activity
+Paramount,More important than anything else; supreme
+Parsimony,Extreme unwillingness to spend money or use resources; frugality
+Paucity,The presence of something only in small or insufficient quantities; scarcity
+Pedantic,Excessively concerned with minor details or rules; ostentatious in one's learning
+Pejorative,Expressing contempt or disapproval; having a negative connotation
+Perceive,To become aware or conscious of; to interpret or regard in a particular way
+Perfunctory,Carried out with minimal effort or reflection; done merely as a routine duty
+Peripheral,Relating to or situated on the edge or periphery; of secondary importance
+Permanent,Lasting or intended to last indefinitely without change
+Pernicious,Having a harmful effect especially in a gradual or subtle way
+Perpetual,Never ending or changing; occurring repeatedly
+Persistent,Continuing firmly or obstinately despite difficulty or opposition
+Perspective,A particular attitude toward or way of regarding something; a point of view
+Perspicacious,Having a ready insight into and understanding of things; mentally sharp
+Pertinent,Relevant or applicable to a particular matter; appropriate
+Pervasive,Spreading widely throughout an area or group of people; omnipresent
+Petulant,Childishly sulky or bad-tempered; showing sudden irritation
+Phenomenon,A fact or situation that is observed to exist or happen; a remarkable occurrence
+Platitude,A remark or statement that has been used too often to be interesting or thoughtful
+Plausible,Seeming reasonable or probable; appearing worthy of belief
+Poignant,Evoking a keen sense of sadness or regret; emotionally moving
+Policy,A course or principle of action adopted by an organization or individual
+Popularize,To make something understandable or accessible to the general public
+Postulate,To suggest or assume the existence fact or truth of something as a basis for reasoning
+Pragmatic,Dealing with things sensibly and realistically based on practical considerations
+Praise,To express warm approval or admiration of; to commend
+Precarious,Not securely held or in position; dangerously unstable
+Preclude,To prevent from happening; to make impossible
+Precocious,Having developed certain abilities at an earlier age than usual
+Predatory,Seeking to exploit or oppress others for personal gain
+Predetermined,Established or decided in advance; fated
+Predict,To say or estimate that a specified thing will happen in the future
+Predilection,A preference or special liking for something; a bias in favor of
+Predominant,Present as the strongest or main element; most common or conspicuous
+Preliminary,Denoting an action or event preceding or done in preparation for something fuller
+Premeditated,Thought out or planned beforehand; deliberate
+Prescribe,To recommend and authorize the use of; to state authoritatively what should be done
+Preserve,To maintain something in its original or existing state; to keep safe from harm
+Presume,To suppose that something is the case based on probability; to take for granted
+Presumptuous,Failing to observe the limits of what is permitted or appropriate; overconfident
+Prevail,To prove more powerful or superior; to be widespread or current
+Prevaricate,To speak or act in an evasive way; to avoid telling the truth
+Preventable,Able to be stopped from happening or arising; avoidable
+Principle,A fundamental truth or proposition serving as the foundation for belief or action
+Pristine,In its original condition; unspoiled or clean and fresh
+Probability,The extent to which something is likely to occur; a probable event
+Procedure,An established or official way of doing something; a series of actions
+Proclaim,To announce officially or publicly; to declare
+Proclivity,A tendency to choose or do something regularly; an inclination
+Produce,To make or manufacture from components or raw materials; to create
+Profligate,Recklessly extravagant or wasteful; dissolute or licentious
+Profound,Very great or intense; showing deep insight or understanding
+Profusion,An abundance or large quantity of something; lavish expenditure
+Prolific,Producing much fruit foliage or many offspring; highly productive
+Prolong,To extend the duration of; to lengthen in time
+Prominent,Important or famous; projecting from something or immediately noticeable
+Propensity,An inclination or natural tendency to behave in a particular way
+Proponent,A person who advocates for a theory proposal or course of action
+Proportion,A part or share of a whole; the relationship of one thing to another in size
+Prosaic,Lacking poetic beauty; commonplace or dull
+Provoke,To stimulate or give rise to a reaction or emotion; to deliberately make angry
+Prudent,Acting with or showing care and thought for the future; wise and sensible
+Prudently,In a way that shows care and thought for the future; wisely
+Pungent,Having a sharply strong taste or smell; sharply painful or penetrating
+Pursue,To follow in order to catch or attack; to seek to attain or accomplish a goal
+Qualify,To be entitled to a benefit or privilege by fulfilling necessary conditions
+Quantity,The amount or number of something; a certain or considerable amount
+Quarrel,An angry argument or disagreement; to have a heated dispute
+Quell,To put an end to typically by force; to suppress or subdue
+Querulous,Complaining in a petulant or whining manner; habitually grumbling
+Questionable,Doubtful as regards truth or quality; open to doubt or suspicion
+Quixotic,Exceedingly idealistic; unrealistic and impractical
+Ramify,To form branches or offshoots; to have complex consequences or implications
+Rancorous,Showing deep-seated resentment or bitter ill will
+Rapacious,Aggressively greedy or grasping; predatory
+Rarely,Not often; seldom
+Rational,Based on or in accordance with reason or logic; sensible
+Rationalize,To attempt to explain or justify behavior or an attitude with logical reasons
+Rebellion,An act of violent or open resistance to an established government or ruler
+Rebuke,To express sharp disapproval or criticism of someone; to reprimand
+Recalcitrant,Having an obstinately uncooperative attitude; stubbornly defiant
+Recant,To say that one no longer holds an opinion or belief; to withdraw a statement
+Receptive,Willing to consider or accept new suggestions and ideas; open-minded
+Reciprocal,Given felt or done in return; mutual
+Reciprocate,To respond to a gesture or action by making a corresponding one
+Reclusive,Avoiding the company of other people; solitary
+Recognizable,Able to be recognized or identified from previous encounters or knowledge
+Rectify,To put right or correct; to remedy or amend
+Redefine,To define again or differently; to give a new or different meaning to
+Redoubtable,Formidable especially as an opponent; worthy of respect or fear
+Redress,To remedy or set right an undesirable situation; to make amends for
+Redundant,Not or no longer needed or useful; superfluous
+Reform,To make changes in something in order to improve it
+Refuse,To indicate or show that one is not willing to do or accept something
+Refute,To prove a statement or theory to be wrong or false; to deny the truth of
+Regime,A government especially an authoritarian one; a system or ordered way of doing things
+Regrettable,Giving rise to regret; undesirable or unwelcome
+Regulate,To control or maintain the rate or speed of; to control by means of rules
+Reject,To dismiss as inadequate or unacceptable; to refuse to accept or consider
+Relegate,To consign or dismiss to an inferior rank or position
+Relevant,Closely connected or appropriate to what is being done or considered
+Relinquish,To voluntarily cease to keep or claim; to give up
+Relocate,To move to a new place and establish one's home or business there
+Reluctant,Unwilling and hesitant; disinclined
+Remiss,Lacking care or attention to duty; negligent
+Renounce,To formally declare one's abandonment of a claim right or possession
+Replenish,To fill something up again; to restore to a former level or condition
+Replicable,Able to be copied or reproduced; capable of being replicated
+Reprehensible,Deserving censure or condemnation; morally wrong
+Representative,Typical of a class group or body of opinion; serving as a delegate
+Repress,To subdue someone or something by force; to suppress or restrain
+Reprieve,To cancel or postpone the punishment of; a temporary relief from something bad
+Repudiate,To refuse to accept or be associated with; to deny the truth or validity of
+Reputable,Having a good reputation; held in high regard
+Rescind,To revoke cancel or repeal a law order or agreement
+Reside,To have one's permanent home in a particular place; to be present or inherent in
+Resilient,Able to withstand or recover quickly from difficult conditions
+Resolve,To settle or find a solution to a problem or contentious matter; determination
+Responsive,Reacting quickly and positively; readily reacting to suggestions or appeals
+Restore,To bring back to a former condition place or position; to repair or renovate
+Restrain,To prevent someone or something from doing something; to keep under control
+Retain,To continue to have something; to keep in one's memory
+Retaliate,To make an attack or assault in return for a similar attack
+Reticent,Not revealing one's thoughts or feelings readily; reserved
+Rhetoric,The art of effective or persuasive speaking or writing; language designed to persuade
+Rousing,Exciting or stirring; causing a strong emotional response
+Rudimentary,Involving or limited to basic principles; elementary or undeveloped
+Ruminate,To think deeply about something; to meditate or ponder
+Sacrosanct,Regarded as too important or valuable to be interfered with; sacred
+Sagacious,Having or showing keen mental discernment and good judgment; wise
+Salutary,Producing good effects; beneficial
+Sanction,A threatened penalty for disobeying a law or rule; official permission or approval
+Sanguine,Optimistic or positive especially in a difficult situation
+Sardonic,Grimly mocking or cynical; scornfully derisive
+Saturate,To cause something to become thoroughly soaked with liquid; to fill completely
+Scorn,A feeling of contempt or disdain for someone or something; to reject with derision
+Scrupulous,Diligent thorough and extremely attentive to details; morally correct
+Scrutinize,To examine or inspect closely and thoroughly
+Secretive,Inclined to conceal feelings and intentions; not open or frank
+Seditious,Inciting or causing people to rebel against the authority of a state
+Sensitive,Quick to detect or respond to slight changes; easily damaged or offended
+Simulate,To imitate the appearance or character of; to create a model of a situation
+Sincerity,The quality of being free from pretense or deceit; genuineness
+Sinuous,Having many curves and turns; lithe and supple
+Skeptical,Not easily convinced; having doubts or reservations
+Sophisticated,Having a great deal of worldly experience and knowledge; highly developed
+Soporific,Tending to induce drowsiness or sleep; tediously boring
+Span,The full extent of something from end to end; to extend across
+Sparingly,In a restricted or economical manner; moderately
+Speculate,To form a theory or conjecture without firm evidence
+Spurious,Not being what it purports to be; false or fake
+Stark,Severe or bare in appearance; unpleasantly or sharply clear
+Stolid,Calm dependable and showing little emotion or animation
+Strategy,A plan of action designed to achieve a long-term or overall aim
+Strenuously,In a way that requires or involves great exertion; vigorously
+Strident,Loud and harsh; presenting a point of view in an excessively forceful way
+Stringent,Strict precise and exacting; imposing rigorous standards
+Sturdily,In a way that is strongly and solidly built; robustly
+Stymie,To prevent or hinder the progress of; to thwart or frustrate
+Substantial,Of considerable importance size or worth; solidly built
+Subtle,So delicate or precise as to be difficult to analyze or describe; understated
+Succumb,To fail to resist pressure temptation or some other negative force
+Sufficient,Enough to meet the needs of a situation or proposed end; adequate
+Supercilious,Behaving as though one is superior to others; arrogantly disdainful
+Superficial,Existing or occurring at or on the surface; lacking depth
+Superfluous,Unnecessary especially through being more than enough; excess
+Supine,Lying face upward; failing to act as a result of moral weakness
+Supplement,Something that completes or enhances something else; an addition
+Suppress,To forcibly put an end to; to prevent from being expressed or published
+Surmise,To suppose that something is true without having evidence to confirm it
+Surpass,To exceed or be greater than; to go beyond in quality or achievement
+Surrender,To cease resistance to an enemy or opponent and submit to their authority
+Susceptible,Likely or liable to be influenced or harmed by a particular thing
+Sustainable,Able to be maintained at a certain rate or level; not depleting resources
+Sycophant,A person who acts obsequiously toward someone important to gain advantage
+Synchronization,The operation or activity of two or more things at the same time or rate
+Taciturn,Reserved or uncommunicative in speech; saying little
+Tangential,Relating to or along a tangent; only slightly connected or relevant
+Tangible,Perceptible by touch; clear and definite; real
+Technique,A way of carrying out a particular task; a skillful or efficient method
+Tedious,Too long slow or dull; tiresome or monotonous
+Temerity,Excessive confidence or boldness; audacity
+Tenacious,Tending to keep a firm hold; persistent and determined
+Tentative,Not certain or fixed; provisional or hesitant
+Tenuous,Very weak or slight; lacking a sound basis
+Theoretical,Concerned with or involving the theory of a subject rather than its practical application
+Theory,A supposition or system of ideas intended to explain something
+Thoughtfulness,Careful consideration or attention; showing consideration for others
+Tortuous,Full of twists and turns; excessively lengthy and complex
+Tractable,Easy to control or influence; manageable
+Tranquil,Free from disturbance; calm and peaceful
+Transform,To make a thorough or dramatic change in form appearance or character
+Transparent,Allowing light to pass through so objects can be seen; easy to perceive or detect
+Trivial,Of little value or importance; insignificant
+Truculent,Eager or quick to argue or fight; aggressively defiant
+Turpitude,Depravity or wickedness; a depraved or wicked act
+Ubiquitous,Present appearing or found everywhere; omnipresent
+Ultimate,Being or happening at the end of a process; final or fundamental
+Uncontroversial,Not giving rise or likely to give rise to controversy or public disagreement
+Unctuous,Excessively or ingratiatingly flattering; oily in character
+Undeniable,Unable to be denied or disputed; certainly true
+Underscore,To underline for emphasis; to emphasize or highlight
+Uniform,Remaining the same in all cases and at all times; consistent
+Unimportant,Lacking in importance or significance; trivial
+Unintended,Not planned or meant; accidental
+Universal,Relating to or done by all people or things in the world; applicable everywhere
+Unmistakable,Not able to be mistaken for anything else; clear and obvious
+Unobtrusive,Not conspicuous or attracting attention; not intrusive
+Unoriginal,Lacking originality; derivative or imitative
+Unpredictable,Not able to be predicted; changeable or erratic
+Usurp,To take a position of power or importance illegally or by force
+Vacuous,Having or showing a lack of thought or intelligence; empty
+Valid,Having a sound basis in logic or fact; legally binding or acceptable
+Validate,To check or prove the validity or accuracy of; to make or declare legally valid
+Variable,Not consistent or having a fixed pattern; liable to change
+Venerate,To regard with great respect; to revere
+Verbose,Using or expressed in more words than are needed; wordy
+Verisimilitude,The appearance of being true or real; the quality of seeming realistic
+Veritable,Used as an intensifier often to qualify a metaphor; genuine or real
+Versatile,Able to adapt or be adapted to many different functions or activities
+Viable,Capable of working successfully; feasible or practical
+Vicarious,Experienced in the imagination through the feelings or actions of another person
+Vigilance,The action or state of keeping careful watch for possible danger or difficulties
+Vindicate,To clear someone of blame or suspicion; to show or prove to be right or justified
+Vindictive,Having or showing a strong or unreasoning desire for revenge
+Vital,Absolutely necessary or important; essential to life
+Vitiate,To spoil or impair the quality or efficiency of; to destroy or impair legal validity
+Vituperative,Bitter and abusive; characterized by harsh criticism
+Vivid,Producing powerful feelings or strong clear images in the mind; intensely deep or bright
+Vociferous,Expressing opinions or feelings in a loud and forceful way; vehement
+Volatile,Liable to change rapidly and unpredictably; prone to sudden violent action
+Waive,To refrain from insisting on or using a right or claim; to relinquish voluntarily
+Warranted,Justified or authorized; deserved or merited
+Wary,Feeling or showing caution about possible dangers or problems
+Widespread,Found or distributed over a large area or number of people; extensive
+Withdraw,To remove or take away; to retreat or pull back
+Yield,To produce or provide; to give way to arguments or pressure
+Zealous,Having or showing zeal; fervent and enthusiastic

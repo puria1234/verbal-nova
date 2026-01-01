@@ -2,11 +2,10 @@
 
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
-import type { VocabularyWord } from "@/lib/types"
 import { cn } from "@/lib/utils"
 
 interface FlashcardProps {
-  word: VocabularyWord
+  word: { id: string; word: string; definition: string }
 }
 
 export function Flashcard({ word }: FlashcardProps) {
@@ -31,9 +30,9 @@ export function Flashcard({ word }: FlashcardProps) {
           )}
           style={{ backfaceVisibility: "hidden" }}
         >
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 w-full px-4">
             <p className="text-sm font-medium text-cyan-300/70 uppercase tracking-widest">Tap to reveal</p>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-balance">{word.word}</h2>
+            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 break-words">{word.word}</h2>
           </div>
         </Card>
 
@@ -48,7 +47,7 @@ export function Flashcard({ word }: FlashcardProps) {
           style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 text-balance">{word.word}</h3>
+            <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 break-words">{word.word}</h3>
             <div>
               <p className="mb-2 text-sm font-semibold text-purple-300/80 uppercase tracking-wider">Definition</p>
               <p className="text-lg leading-relaxed text-gray-100 text-pretty">{word.definition}</p>

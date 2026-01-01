@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "@/contexts/firebase-auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -35,7 +35,22 @@ export default function SignupPage() {
       await signup(email, password, name)
       router.push("/dashboard")
     } catch (err: any) {
-      setError(err.message || "Failed to create account")
+      const errorCode = err.code
+      let errorMessage = "Failed to create account"
+      
+      if (errorCode === "auth/email-already-in-use") {
+        errorMessage = "An account with this email already exists. Please log in instead."
+      } else if (errorCode === "auth/invalid-email") {
+        errorMessage = "Invalid email address format."
+      } else if (errorCode === "auth/weak-password") {
+        errorMessage = "Password is too weak. Please use a stronger password."
+      } else if (errorCode === "auth/operation-not-allowed") {
+        errorMessage = "Email/password accounts are not enabled. Please contact support."
+      } else if (err.message) {
+        errorMessage = err.message
+      }
+      
+      setError(errorMessage)
     } finally {
       setLoading(false)
     }

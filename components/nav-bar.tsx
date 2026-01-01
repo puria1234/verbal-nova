@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "@/contexts/firebase-auth-context"
 import { Button } from "@/components/ui/button"
 import { BookOpen, LayoutDashboard, SquareStack, Brain, LogOut, Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -14,26 +14,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { useEffect, useRef } from "react"
 
 export function NavBar() {
   const pathname = usePathname()
-  const { logout, user, refreshProfilePhoto } = useAuth()
-  const hasRefreshed = useRef(false)
+  const { logout, user } = useAuth()
 
-  // Refresh profile photo on mount (only once)
-  useEffect(() => {
-    if (user && !hasRefreshed.current) {
-      hasRefreshed.current = true
-      refreshProfilePhoto().catch(err => {
-        console.error('Failed to refresh profile photo:', err)
-      })
-    }
-  }, [user, refreshProfilePhoto])
-
-  // Get profile picture from OAuth prefs or use Appwrite's avatar service
-  const profilePicture = user?.prefs?.picture || user?.prefs?.avatar_url || 
-    (user ? `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=3b82f6&color=fff&size=128` : null)
+  // Get profile picture from Firebase user
+  const profilePicture = user?.photoURL || 
+    (user ? `https://ui-avatars.com/api/?name=${encodeURIComponent(user.displayName || user.email || 'User')}&background=3b82f6&color=fff&size=128` : null)
 
   const handleLogout = async () => {
     await logout()
@@ -42,6 +30,8 @@ export function NavBar() {
 
   const navItems = [
     { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+    { href: "/daily-challenge", label: "Daily", icon: Brain },
+    { href: "/battle", label: "Battle", icon: Brain },
     { href: "/flashcards", label: "Flashcards", icon: SquareStack },
     { href: "/quiz", label: "Quiz", icon: Brain },
   ]
@@ -115,7 +105,7 @@ export function NavBar() {
                 {user ? (
                   <>
                     <DropdownMenuItem className="cursor-default">
-                      <span className="text-sm text-gray-300">{user.name ?? "Profile"} ({user.email})</span>
+                      <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
                       <LogOut className="mr-2 h-4 w-4" />
@@ -145,7 +135,7 @@ export function NavBar() {
                       {profilePicture && (
                         <AvatarImage 
                           src={profilePicture} 
-                          alt={user.name || "User"} 
+                          alt={user.displayName || user.email || "User"} 
                           referrerPolicy="no-referrer"
                         />
                       )}
@@ -157,7 +147,7 @@ export function NavBar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="glass-card border-white/20">
                   <DropdownMenuItem className="cursor-pointer">
-                    <span className="text-sm text-gray-300">{user.name ?? "Profile"} ({user.email})</span>
+                    <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
                     <LogOut className="mr-2 h-4 w-4" />

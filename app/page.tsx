@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Brain, Trophy, Sparkles, TrendingUp, CheckCircle2, Target, User, LogOut, Menu } from "lucide-react"
+import { BookOpen, Brain, Trophy, Sparkles, TrendingUp, CheckCircle2, Target, User, LogOut, Menu, Flame, Swords, Users } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "@/contexts/firebase-auth-context"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useRouter } from "next/navigation"
 
@@ -14,6 +14,13 @@ export default function HomePage() {
   const [timelineVisible, setTimelineVisible] = useState(false)
   const { user, logout } = useAuth()
   const router = useRouter()
+
+  // Redirect if logged in
+  useEffect(() => {
+    if (user) {
+      router.push("/dashboard")
+    }
+  }, [user, router])
 
   const handleLogout = async () => {
     await logout()
@@ -255,7 +262,14 @@ export default function HomePage() {
 
         {/* Features Grid */}
         <div className="container mx-auto px-4 py-20">
-          <div className="mx-auto mt-20 grid max-w-5xl gap-8 md:grid-cols-3">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Powerful Learning Features
+          </h2>
+          <p className="text-center text-gray-400 mb-16 text-lg">
+            Everything you need to master SAT vocabulary
+          </p>
+
+          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
               <div className="mb-4 inline-flex rounded-xl bg-blue-500/20 p-4">
                 <BookOpen className="h-8 w-8 text-blue-400" />
@@ -283,6 +297,36 @@ export default function HomePage() {
               <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Track Progress</h3>
               <p className="text-gray-300 text-pretty leading-relaxed">
                 Monitor your learning journey with detailed statistics and progress tracking.
+              </p>
+            </div>
+
+            <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
+              <div className="mb-4 inline-flex rounded-xl bg-orange-500/20 p-4">
+                <Flame className="h-8 w-8 text-orange-400" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Daily Challenge</h3>
+              <p className="text-gray-300 text-pretty leading-relaxed">
+                Quick 5-word streak challenge perfect for busy students. Build your streak daily!
+              </p>
+            </div>
+
+            <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
+              <div className="mb-4 inline-flex rounded-xl bg-red-500/20 p-4">
+                <Swords className="h-8 w-8 text-red-400" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Battle Mode</h3>
+              <p className="text-gray-300 text-pretty leading-relaxed">
+                Compete in timed vocab rounds against AI or challenge friends with join codes.
+              </p>
+            </div>
+
+            <div className="rounded-2xl glass-card p-8 transition-all hover:scale-105">
+              <div className="mb-4 inline-flex rounded-xl bg-green-500/20 p-4">
+                <Users className="h-8 w-8 text-green-400" />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold text-balance text-white">Friend Battles</h3>
+              <p className="text-gray-300 text-pretty leading-relaxed">
+                Create a room, share the code, and battle your friends in real-time vocabulary duels.
               </p>
             </div>
           </div>
