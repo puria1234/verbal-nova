@@ -78,7 +78,7 @@ export function NavBar() {
                       {profilePicture && (
                         <AvatarImage 
                           src={profilePicture} 
-                          alt={user.name || "User"} 
+                          alt={user.displayName || user.email || "User"} 
                           referrerPolicy="no-referrer"
                         />
                       )}
