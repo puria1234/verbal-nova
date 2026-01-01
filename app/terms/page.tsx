@@ -17,7 +17,7 @@ export default function TermsPage() {
 
         <div className="glass-card rounded-2xl p-8 space-y-6">
           <h1 className="text-3xl font-bold text-white">Terms of Service</h1>
-          <p className="text-sm text-gray-400">Last updated: December 31, 2024</p>
+          <p className="text-sm text-gray-400">Last updated: December 31, 2025</p>
 
           <div className="space-y-4 text-gray-300">
             <section>

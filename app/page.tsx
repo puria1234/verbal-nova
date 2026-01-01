@@ -336,19 +336,13 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-white/10 bg-white/5 backdrop-blur-xl py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-blue-400" />
-              <span className="text-sm text-gray-400">© 2024 Verbal Nova. All rights reserved.</span>
-            </div>
-            <div className="flex items-center gap-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
+          <div className="flex items-center justify-center gap-6">
+            <Link href="/privacy" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </footer>
