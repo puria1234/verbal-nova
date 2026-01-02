@@ -42,7 +42,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-xl font-semibold text-white mb-2">Data Storage</h2>
-              <p>All data is stored securely using Firebase. We do not transfer your data internationally or share it with third parties.</p>
+              <p>All data is securely stored in our database. We do not transfer your data internationally or share it with third parties.</p>
             </section>
 
             <section>

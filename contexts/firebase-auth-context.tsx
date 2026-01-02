@@ -10,8 +10,11 @@ import {
   signOut as firebaseSignOut,
   updateProfile,
   sendPasswordResetEmail,
+  deleteUser,
 } from "firebase/auth"
 import { auth, googleProvider } from "@/lib/firebase"
+import { doc, deleteDoc, collection, query, where, getDocs } from "firebase/firestore"
+import { db } from "@/lib/firebase"
 
 interface AuthContextType {
   user: User | null
@@ -21,6 +24,8 @@ interface AuthContextType {
   loginWithGoogle: () => Promise<void>
   logout: () => Promise<void>
   resetPassword: (email: string) => Promise<void>
+  deleteAccount: () => Promise<void>
+  updateProfilePicture: (photoURL: string) => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -31,6 +36,8 @@ const AuthContext = createContext<AuthContextType>({
   loginWithGoogle: async () => {},
   logout: async () => {},
   resetPassword: async () => {},
+  deleteAccount: async () => {},
+  updateProfilePicture: async () => {},
 })
 
 export const useAuth = () => useContext(AuthContext)
@@ -68,8 +75,38 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await sendPasswordResetEmail(auth, email)
   }
 
+  const deleteAccount = async () => {
+    if (!user) throw new Error("No user logged in")
+    
+    try {
+      // Delete user data from Firestore
+      const userId = user.uid
+      
+      // Delete progress data
+      const progressRef = doc(db, "progress", userId)
+      await deleteDoc(progressRef)
+      
+      // Delete any quiz results
+      const quizResultsQuery = query(collection(db, "quizResults"), where("userId", "==", userId))
+      const quizResultsSnapshot = await getDocs(quizResultsQuery)
+      const deletePromises = quizResultsSnapshot.docs.map(doc => deleteDoc(doc.ref))
+      await Promise.all(deletePromises)
+      
+      // Delete the user account
+      await deleteUser(user)
+    } catch (error) {
+      console.error("Error deleting account:", error)
+      throw error
+    }
+  }
+
+  const updateProfilePicture = async (photoURL: string) => {
+    if (!user) throw new Error("No user logged in")
+    await updateProfile(user, { photoURL })
+  }
+
   return (
-    <AuthContext.Provider value={{ user, loading, login, signup, loginWithGoogle, logout, resetPassword }}>
+    <AuthContext.Provider value={{ user, loading, login, signup, loginWithGoogle, logout, resetPassword, deleteAccount, updateProfilePicture }}>
       {children}
     </AuthContext.Provider>
   )

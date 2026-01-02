@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useAuth } from "@/contexts/firebase-auth-context"
 import { Button } from "@/components/ui/button"
-import { BookOpen, LayoutDashboard, SquareStack, Brain, LogOut, Menu } from "lucide-react"
+import { BookOpen, LayoutDashboard, SquareStack, Brain, LogOut, Menu, Settings } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { User } from "lucide-react"
 import {
@@ -106,6 +106,12 @@ export function NavBar() {
                     <DropdownMenuItem className="cursor-default">
                       <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
                     </DropdownMenuItem>
+                    <DropdownMenuItem asChild className="cursor-pointer text-white hover:bg-white/10">
+                      <Link href="/settings" className="flex items-center">
+                        <Settings className="mr-2 h-4 w-4" />
+                        Settings
+                      </Link>
+                    </DropdownMenuItem>
                     <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
                       <LogOut className="mr-2 h-4 w-4" />
                       Logout
@@ -147,6 +153,12 @@ export function NavBar() {
                 <DropdownMenuContent align="end" className="glass-card border-white/20">
                   <DropdownMenuItem className="cursor-pointer">
                     <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className="cursor-pointer text-white hover:bg-white/10">
+                    <Link href="/settings" className="flex items-center">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Settings
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
                     <LogOut className="mr-2 h-4 w-4" />
