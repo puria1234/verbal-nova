@@ -1,12 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { useAuth } from "@/contexts/firebase-auth-context"
 import { useVocabulary } from "@/hooks/use-vocabulary"
 import { ProtectedRoute } from "@/components/protected-route"
 import { NavBar } from "@/components/nav-bar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Flame, Check, X, Trophy } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore"
@@ -23,13 +22,7 @@ export default function DailyChallengePage() {
   const [completed, setCompleted] = useState(false)
   const [challengeLoading, setChallengeLoading] = useState(true)
 
-  useEffect(() => {
-    if (user && words.length > 0) {
-      loadDailyChallenge()
-    }
-  }, [user, words])
-
-  const loadDailyChallenge = async () => {
+  const loadDailyChallenge = useCallback(async () => {
     if (!user) return
 
     const today = new Date().toDateString()
@@ -71,7 +64,17 @@ export default function DailyChallengePage() {
       console.error("Failed to load daily challenge:", error)
       setChallengeLoading(false)
     }
-  }
+  }, [user, words])
+
+  useEffect(() => {
+    if (user && words.length > 0) {
+      // Defer to next tick to avoid React warning about sync setState in effect body
+      const id = setTimeout(() => {
+        void loadDailyChallenge()
+      }, 0)
+      return () => clearTimeout(id)
+    }
+  }, [user, words, loadDailyChallenge])
 
   const handleAnswer = async (answer: string) => {
     if (selectedAnswer) return
@@ -97,8 +100,11 @@ export default function DailyChallengePage() {
   const completeChallenge = async (finalScore: number) => {
     if (!user) return
 
-    const today = new Date().toDateString()
-    const yesterday = new Date(Date.now() - 86400000).toDateString()
+    const todayDate = new Date()
+    const today = todayDate.toDateString()
+    const yesterdayDate = new Date(todayDate)
+    yesterdayDate.setDate(todayDate.getDate() - 1)
+    const yesterday = yesterdayDate.toDateString()
     const challengeRef = doc(db, "dailyChallenges", user.uid)
 
     try {

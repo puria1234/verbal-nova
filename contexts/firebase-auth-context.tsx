@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signInWithRedirect,
+  signInWithPopup,
   getRedirectResult,
   signOut as firebaseSignOut,
   updateProfile,
@@ -48,15 +49,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    getRedirectResult(auth).catch((error) => {
-      console.error("Google sign-in redirect failed:", error)
-    })
+    let isMounted = true
+
+    const handleRedirectResult = async () => {
+      try {
+        const result = await getRedirectResult(auth)
+        if (result?.user && isMounted) {
+          setUser(result.user)
+        }
+      } catch (error) {
+        console.error("Google sign-in redirect failed:", error)
+      }
+    }
+
+    handleRedirectResult()
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!isMounted) return
       setUser(user)
       setLoading(false)
     })
-    return unsubscribe
+    return () => {
+      isMounted = false
+      unsubscribe()
+    }
   }, [])
 
   const login = async (email: string, password: string) => {
@@ -69,7 +85,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const loginWithGoogle = async () => {
-    await signInWithRedirect(auth, googleProvider)
+    try {
+      await signInWithPopup(auth, googleProvider)
+    } catch (error: any) {
+      // Fall back to redirect flow when popups are blocked or unsupported (e.g., mobile browsers)
+      if (
+        error?.code === "auth/popup-blocked" ||
+        error?.code === "auth/popup-closed-by-user" ||
+        error?.code === "auth/operation-not-supported-in-this-environment"
+      ) {
+        await signInWithRedirect(auth, googleProvider)
+        return
+      }
+      throw error
+    }
   }
 
   const logout = async () => {

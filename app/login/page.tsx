@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { useAuth } from "@/contexts/firebase-auth-context"
+import { auth } from "@/lib/firebase"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -74,6 +75,10 @@ export default function LoginPage() {
     setGoogleLoading(true)
     try {
       await loginWithGoogle()
+      if (auth.currentUser) {
+        router.replace("/dashboard")
+        return
+      }
     } catch (err: any) {
       const errorCode = err.code
       let errorMessage = "Failed to sign in with Google"
@@ -82,6 +87,10 @@ export default function LoginPage() {
         errorMessage = "Popup blocked. Please allow popups or use email/password."
       } else if (errorCode === "auth/popup-closed-by-user") {
         errorMessage = "Sign-in popup closed before completing."
+      } else if (errorCode === "auth/unauthorized-domain") {
+        errorMessage = "This domain isn't authorized for Google sign-in. Check Firebase authorized domains."
+      } else if (errorCode === "auth/network-request-failed") {
+        errorMessage = "Network error while signing in. Please try again."
       } else if (errorCode === "auth/operation-not-allowed") {
         errorMessage = "Google sign-in is not enabled for this project."
       } else if (err.message) {
@@ -89,8 +98,8 @@ export default function LoginPage() {
       }
 
       setError(errorMessage)
-      setGoogleLoading(false)
     }
+    setGoogleLoading(false)
   }
 
   return (

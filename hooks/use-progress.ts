@@ -21,7 +21,7 @@ export function useProgress() {
 
   useEffect(() => {
     if (user) {
-      loadProgress()
+      void loadProgress()
     } else {
       setProgress([])
       setLoading(false)
@@ -55,7 +55,7 @@ export function useProgressStats() {
 
   useEffect(() => {
     if (user) {
-      loadStats()
+      void loadStats()
     } else {
       setStats({ totalStudied: 0, knownWords: 0 })
       setLoading(false)

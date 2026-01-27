@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useAuth } from "@/contexts/firebase-auth-context"
 import { useVocabulary, VocabularyWord } from "@/hooks/use-vocabulary"
 import { ProtectedRoute } from "@/components/protected-route"
@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
-import { Trophy, RotateCcw, Search } from "lucide-react"
+import { Clock, RotateCcw, Search, Trophy } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface QuizQuestion {
@@ -19,7 +19,7 @@ interface QuizQuestion {
 }
 
 export default function QuizPage() {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const { words, loading } = useVocabulary()
   const [selectedWordIds, setSelectedWordIds] = useState<string[]>([])
   const [searchQuery, setSearchQuery] = useState("")
@@ -29,6 +29,13 @@ export default function QuizPage() {
   const [score, setScore] = useState(0)
   const [showResult, setShowResult] = useState(false)
   const [quizStarted, setQuizStarted] = useState(false)
+  const [timedMode, setTimedMode] = useState(false)
+  const [timeLimitMinutesInput, setTimeLimitMinutesInput] = useState("5")
+  const [timeLimitMinutes, setTimeLimitMinutes] = useState(5)
+  const [timeRemaining, setTimeRemaining] = useState<number | null>(null)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const showResultRef = useRef(false)
+  const timeRemainingRef = useRef<number | null>(null)
 
   // Filter words based on search query
   const filteredWords = useMemo(() => {
@@ -63,12 +70,25 @@ export default function QuizPage() {
   const startQuiz = () => {
     const chosen = words.filter((w) => selectedWordIds.includes(w.id))
     if (chosen.length === 0) return
+    if (timedMode) {
+      const parsed = Number.parseInt(timeLimitMinutesInput, 10)
+      if (Number.isNaN(parsed) || parsed <= 0) {
+        return
+      }
+      setTimeLimitMinutes(parsed)
+    }
     setQuestions(buildQuestions(chosen))
     setQuizStarted(true)
     setShowResult(false)
     setCurrentQuestion(0)
     setSelectedAnswer(null)
     setScore(0)
+    if (timedMode) {
+      const parsed = Number.parseInt(timeLimitMinutesInput, 10)
+      setTimeRemaining((Number.isNaN(parsed) || parsed <= 0 ? timeLimitMinutes : parsed) * 60)
+    } else {
+      setTimeRemaining(null)
+    }
   }
 
   const handleAnswer = (answer: string) => {
@@ -82,6 +102,7 @@ export default function QuizPage() {
 
     // Move to next question after a delay
     setTimeout(() => {
+      if (showResultRef.current || timeRemainingRef.current === 0) return
       if (currentQuestion < questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1)
         setSelectedAnswer(null)
@@ -92,7 +113,6 @@ export default function QuizPage() {
   }
 
   const finishQuiz = async () => {
-    const finalScore = score + (selectedAnswer === questions[currentQuestion].correctAnswer ? 1 : 0)
     setShowResult(true)
   }
 
@@ -103,6 +123,53 @@ export default function QuizPage() {
     setShowResult(false)
     setQuizStarted(false)
     setQuestions([])
+    setTimeRemaining(null)
+  }
+
+  useEffect(() => {
+    showResultRef.current = showResult
+  }, [showResult])
+
+  useEffect(() => {
+    timeRemainingRef.current = timeRemaining
+  }, [timeRemaining])
+
+  useEffect(() => {
+    if (!quizStarted || showResult || !timedMode || timeRemaining === null) {
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+        timerRef.current = null
+      }
+      return
+    }
+
+    timerRef.current = setInterval(() => {
+      setTimeRemaining((prev) => {
+        if (prev === null) return prev
+        if (prev <= 1) {
+          if (timerRef.current) {
+            clearInterval(timerRef.current)
+            timerRef.current = null
+          }
+          setShowResult(true)
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+        timerRef.current = null
+      }
+    }
+  }, [quizStarted, showResult, timedMode, timeRemaining])
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    return `${mins}:${secs.toString().padStart(2, "0")}`
   }
 
   if (loading) {
@@ -214,11 +281,47 @@ export default function QuizPage() {
                     </div>
                   </div>
 
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-white">Timed quiz</p>
+                        <p className="text-xs text-gray-400">Add a countdown to complete the quiz.</p>
+                      </div>
+                      <Checkbox
+                        checked={timedMode}
+                        onCheckedChange={(val) => setTimedMode(!!val)}
+                      />
+                    </div>
+                    {timedMode && (
+                      <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <label className="text-xs text-gray-400">Time limit (minutes)</label>
+                        <Input
+                          type="number"
+                          min={1}
+                          step={1}
+                          inputMode="numeric"
+                          value={timeLimitMinutesInput}
+                          onChange={(e) => {
+                            const next = e.target.value
+                            if (next === "" || /^[0-9]+$/.test(next)) {
+                              setTimeLimitMinutesInput(next)
+                            }
+                          }}
+                          className="h-9 w-32 bg-white/5 border-white/20 text-white placeholder:text-gray-400"
+                          placeholder="e.g. 7"
+                        />
+                      </div>
+                    )}
+                  </div>
+
                   <Button
                     onClick={startQuiz}
                     className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0"
                     size="lg"
-                    disabled={selectedWordIds.length === 0}
+                    disabled={
+                      selectedWordIds.length === 0 ||
+                      (timedMode && (!timeLimitMinutesInput || Number.parseInt(timeLimitMinutesInput, 10) <= 0))
+                    }
                   >
                     Start Quiz
                   </Button>
@@ -258,11 +361,19 @@ export default function QuizPage() {
                 <p className="text-sm text-muted-foreground">
                   Question {currentQuestion + 1} of {questions.length}
                 </p>
-                <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-secondary">
-                  <div
-                    className="h-full bg-primary transition-all duration-300"
-                    style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-                  />
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+                    <div
+                      className="h-full bg-primary transition-all duration-300"
+                      style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                    />
+                  </div>
+                  {timedMode && timeRemaining !== null && (
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white">
+                      <Clock className="h-4 w-4 text-blue-300" />
+                      {formatTime(timeRemaining)}
+                    </div>
+                  )}
                 </div>
               </div>
 

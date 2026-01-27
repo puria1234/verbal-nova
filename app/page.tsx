@@ -9,7 +9,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { useRouter } from "next/navigation"
 
 export default function HomePage() {
-  const [scrollY, setScrollY] = useState(0)
+  const [progressHeight, setProgressHeight] = useState("0%")
   const timelineRef = useRef<HTMLDivElement>(null)
   const [timelineVisible, setTimelineVisible] = useState(false)
   const { user, logout } = useAuth()
@@ -28,7 +28,18 @@ export default function HomePage() {
   }
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
+    const updateProgress = () => {
+      const ref = timelineRef.current
+      if (!ref) return
+      const midpoint = window.scrollY + window.innerHeight / 2
+      const percent = Math.min(100, Math.max(0, ((midpoint - ref.offsetTop) / ref.clientHeight) * 100))
+      setProgressHeight(`${percent}%`)
+    }
+
+    const handleScroll = () => updateProgress()
+
+    updateProgress()
+    const refSnapshot = timelineRef.current
     window.addEventListener("scroll", handleScroll)
 
     const observer = new IntersectionObserver(
@@ -48,8 +59,8 @@ export default function HomePage() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
-      if (timelineRef.current) {
-        observer.unobserve(timelineRef.current)
+      if (refSnapshot) {
+        observer.unobserve(refSnapshot)
       }
     }
   }, [])
@@ -193,11 +204,7 @@ export default function HomePage() {
               {/* Animated Progress Line */}
               <div
                 className="absolute left-1/2 top-0 w-0.5 bg-gradient-to-b from-blue-400 to-cyan-400 hidden md:block transition-all duration-300 ease-out"
-                style={{
-                  height: timelineRef.current ?
-                    `${Math.min(100, Math.max(0, ((scrollY + window.innerHeight / 2) - timelineRef.current.offsetTop) / (timelineRef.current.clientHeight) * 100))}%`
-                    : '0%'
-                }}
+                style={{ height: progressHeight }}
               />
 
               {/* Timeline Items */}
