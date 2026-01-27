@@ -6,7 +6,8 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   signOut as firebaseSignOut,
   updateProfile,
   sendPasswordResetEmail,
@@ -47,6 +48,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    getRedirectResult(auth).catch((error) => {
+      console.error("Google sign-in redirect failed:", error)
+    })
+
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user)
       setLoading(false)
@@ -64,7 +69,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const loginWithGoogle = async () => {
-    await signInWithPopup(auth, googleProvider)
+    await signInWithRedirect(auth, googleProvider)
   }
 
   const logout = async () => {

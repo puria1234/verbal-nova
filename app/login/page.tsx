@@ -16,6 +16,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const [googleLoading, setGoogleLoading] = useState(false)
   const { login, loginWithGoogle, user, loading: authLoading } = useAuth()
   const router = useRouter()
 
@@ -65,6 +66,30 @@ export default function LoginPage() {
       setError(errorMessage)
     } finally {
       setLoading(false)
+    }
+  }
+
+  const handleGoogleLogin = async () => {
+    setError("")
+    setGoogleLoading(true)
+    try {
+      await loginWithGoogle()
+    } catch (err: any) {
+      const errorCode = err.code
+      let errorMessage = "Failed to sign in with Google"
+
+      if (errorCode === "auth/popup-blocked") {
+        errorMessage = "Popup blocked. Please allow popups or use email/password."
+      } else if (errorCode === "auth/popup-closed-by-user") {
+        errorMessage = "Sign-in popup closed before completing."
+      } else if (errorCode === "auth/operation-not-allowed") {
+        errorMessage = "Google sign-in is not enabled for this project."
+      } else if (err.message) {
+        errorMessage = err.message
+      }
+
+      setError(errorMessage)
+      setGoogleLoading(false)
     }
   }
 
@@ -125,10 +150,11 @@ export default function LoginPage() {
               type="button"
               variant="outline"
               className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 flex items-center justify-center gap-2"
-              onClick={loginWithGoogle}
+              onClick={handleGoogleLogin}
+              disabled={googleLoading}
             >
               <GoogleIcon />
-              Continue with Google
+              {googleLoading ? "Redirecting..." : "Continue with Google"}
             </Button>
 
             <p className="text-center text-sm text-gray-400">
