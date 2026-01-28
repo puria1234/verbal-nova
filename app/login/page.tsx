@@ -103,21 +103,21 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
-      <Card className="w-full max-w-md glass-card">
+    <div className="flex min-h-screen items-center justify-center px-4 bg-background">
+      <Card className="w-full max-w-md shadow-lg border-border">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20">
-            <BookOpen className="h-6 w-6 text-blue-400" />
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+            <BookOpen className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-2xl text-balance text-white">Welcome Back</CardTitle>
-          <CardDescription className="text-pretty text-gray-300">Sign in to continue your learning journey</CardDescription>
+          <CardTitle className="text-2xl text-balance">Welcome Back</CardTitle>
+          <CardDescription className="text-pretty text-muted-foreground">Sign in to continue your learning journey</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            {error && <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-300">{error}</div>}
+            {error && <div className="rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-700">{error}</div>}
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-white">
+              <label htmlFor="email" className="text-sm font-medium">
                 Email
               </label>
               <Input
@@ -127,16 +127,16 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-white/5 border-white/20 text-white placeholder:text-gray-500"
+                className="bg-white border-border"
               />
             </div>
 
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <label htmlFor="password" className="text-sm font-medium text-white">
+                <label htmlFor="password" className="text-sm font-medium">
                   Password
                 </label>
-                <Link href="/forgot-password" className="text-xs text-blue-400 hover:text-blue-300 hover:underline">
+                <Link href="/forgot-password" className="text-xs text-primary hover:underline">
                   Forgot password?
                 </Link>
               </div>
@@ -147,18 +147,18 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="bg-white/5 border-white/20 text-white placeholder:text-gray-500"
+                className="bg-white border-border"
               />
             </div>
 
-            <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0" disabled={loading}>
+            <Button type="submit" className="w-full" disabled={loading}>
               {loading ? "Signing in..." : "Sign In"}
             </Button>
 
             <Button
               type="button"
               variant="outline"
-              className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 flex items-center justify-center gap-2"
+              className="w-full flex items-center justify-center gap-2"
               onClick={handleGoogleLogin}
               disabled={googleLoading}
             >

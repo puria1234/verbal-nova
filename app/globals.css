@@ -119,17 +119,30 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white min-h-screen;
+    @apply bg-background text-foreground min-h-screen;
     font-family: var(--font-geist), system-ui, sans-serif;
   }
   
   /* Glassmorphism utilities */
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+    @apply bg-card backdrop-blur border border-border shadow-sm;
   }
   
   .glass-card {
-    @apply bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-2xl;
+    @apply bg-card border border-border shadow-sm;
+  }
+
+  /* 3D card helpers */
+  .perspective-1200 {
+    perspective: 1200px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
   }
   
   /* Animations */

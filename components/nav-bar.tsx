@@ -36,12 +36,12 @@ export function NavBar() {
   ]
 
   return (
-    <nav className="border-b border-white/10 bg-white/5 backdrop-blur-xl">
+    <nav className="border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/90">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-4 md:gap-8">
           <Link href="/dashboard" className="flex items-center gap-2">
-            <BookOpen className="h-6 w-6 text-blue-400" />
-            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Verbal Nova</span>
+            <BookOpen className="h-6 w-6 text-primary" />
+            <span className="text-xl font-bold text-foreground">Verbal Nova</span>
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
@@ -54,8 +54,8 @@ export function NavBar() {
                   <Button
                     variant={isActive ? "secondary" : "ghost"}
                     className={cn(
-                      "gap-2 hover:bg-white/10 text-white hover:text-white",
-                      isActive && "bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-white/20 text-white",
+                      "gap-2",
+                      isActive ? "bg-secondary text-foreground border-border" : "text-foreground hover:bg-muted"
                     )}
                   >
                     <Icon className="h-4 w-4" />
@@ -92,7 +92,7 @@ export function NavBar() {
                   </Button>
                 )}
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="glass-card border-white/20 min-w-[180px]">
+              <DropdownMenuContent align="end" className="glass-card border-border min-w-[180px] bg-card">
                 {navItems.map((item) => (
                   <DropdownMenuItem key={item.href} asChild>
                     <Link href={item.href} className="flex items-center gap-2">
@@ -104,15 +104,15 @@ export function NavBar() {
                 {user ? (
                   <>
                     <DropdownMenuItem className="cursor-default">
-                      <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
+                      <span className="text-sm text-muted-foreground">{user.displayName ?? "Profile"} ({user.email})</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem asChild className="cursor-pointer text-white hover:bg-white/10">
+                    <DropdownMenuItem asChild className="cursor-pointer">
                       <Link href="/settings" className="flex items-center">
                         <Settings className="mr-2 h-4 w-4" />
                         Settings
                       </Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
+                    <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
                       <LogOut className="mr-2 h-4 w-4" />
                       Logout
                     </DropdownMenuItem>
@@ -135,7 +135,7 @@ export function NavBar() {
             <div className="hidden md:block">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="rounded-full bg-blue-500/20 hover:bg-blue-500/30 p-0">
+                  <Button variant="ghost" size="icon" className="rounded-full border border-border bg-secondary/80 hover:bg-secondary p-0">
                     <Avatar className="h-8 w-8">
                       {profilePicture && (
                         <AvatarImage 
@@ -150,17 +150,17 @@ export function NavBar() {
                     </Avatar>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="glass-card border-white/20">
+                  <DropdownMenuContent align="end" className="glass-card border-border bg-card">
                   <DropdownMenuItem className="cursor-pointer">
-                    <span className="text-sm text-gray-300">{user.displayName ?? "Profile"} ({user.email})</span>
+                    <span className="text-sm text-muted-foreground">{user.displayName ?? "Profile"} ({user.email})</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="cursor-pointer text-white hover:bg-white/10">
+                  <DropdownMenuItem asChild className="cursor-pointer">
                     <Link href="/settings" className="flex items-center">
                       <Settings className="mr-2 h-4 w-4" />
                       Settings
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={handleLogout} className="cursor-pointer text-white hover:bg-white/10">
+                  <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
                     <LogOut className="mr-2 h-4 w-4" />
                     Logout
                   </DropdownMenuItem>
@@ -170,10 +170,10 @@ export function NavBar() {
           ) : (
             <div className="hidden md:flex items-center gap-2">
               <Link href="/login">
-                <Button variant="ghost" className="hover:bg-white/10 hover:text-white text-white">Log in</Button>
+                <Button variant="ghost">Log in</Button>
               </Link>
               <Link href="/signup">
-                <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0">Get Started</Button>
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button>
               </Link>
             </div>
           )}

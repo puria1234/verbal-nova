@@ -13,10 +13,10 @@ export default function AuthCallbackPage() {
   }, [router])
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+    <div className="flex min-h-screen items-center justify-center bg-background">
       <div className="text-center">
         <div className="h-8 w-8 mx-auto mb-4 animate-spin rounded-full border-4 border-blue-500 border-t-transparent" />
-        <p className="text-white">Completing sign in...</p>
+        <p>Completing sign in...</p>
       </div>
     </div>
   )

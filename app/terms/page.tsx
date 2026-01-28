@@ -6,27 +6,27 @@ import { ArrowLeft } from "lucide-react"
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 px-4 py-8">
+    <div className="min-h-screen bg-background px-4 py-8 text-foreground">
       <div className="container mx-auto max-w-3xl">
         <Link href="/">
-          <Button variant="ghost" className="mb-6 text-white hover:bg-white/10">
+          <Button variant="ghost" className="mb-6">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back
           </Button>
         </Link>
 
         <div className="glass-card rounded-2xl p-8 space-y-6">
-          <h1 className="text-3xl font-bold text-white">Terms of Service</h1>
-          <p className="text-sm text-gray-400">Last updated: December 31, 2025</p>
+          <h1 className="text-3xl font-bold">Terms of Service</h1>
+          <p className="text-sm text-muted-foreground">Last updated: December 31, 2025</p>
 
-          <div className="space-y-4 text-gray-300">
+          <div className="space-y-4 text-muted-foreground">
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Acceptance of Terms</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Acceptance of Terms</h2>
               <p>By using Verbal Nova, you agree to these terms. If you don't agree, please don't use the service.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Use of Service</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Use of Service</h2>
               <p>You agree to:</p>
               <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
                 <li>Use the service for personal, educational purposes</li>
@@ -37,22 +37,22 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Content</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Content</h2>
               <p>All vocabulary content is provided for educational purposes. We strive for accuracy but cannot guarantee all definitions are error-free.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Account Termination</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Account Termination</h2>
               <p>We reserve the right to terminate accounts that violate these terms or engage in abusive behavior.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Disclaimer</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Disclaimer</h2>
               <p>The service is provided "as is" without warranties. We are not responsible for SAT scores or test outcomes.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-2">Changes to Terms</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Changes to Terms</h2>
               <p>We may update these terms. Continued use of the service means you accept the updated terms.</p>
             </section>
           </div>

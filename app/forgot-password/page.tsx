@@ -44,25 +44,25 @@ export default function ForgotPasswordPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
-      <Card className="w-full max-w-md glass-card">
+    <div className="flex min-h-screen items-center justify-center px-4 bg-background">
+      <Card className="w-full max-w-md shadow-lg border-border">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20">
-            <BookOpen className="h-6 w-6 text-blue-400" />
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+            <BookOpen className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-2xl text-balance text-white">Reset Password</CardTitle>
-          <CardDescription className="text-pretty text-gray-300">
+          <CardTitle className="text-2xl text-balance">Reset Password</CardTitle>
+          <CardDescription className="text-pretty text-muted-foreground">
             {success ? "Check your email" : "Enter your email to receive a reset link"}
           </CardDescription>
         </CardHeader>
         <CardContent>
           {success ? (
             <div className="space-y-4">
-              <div className="rounded-lg bg-green-500/10 border border-green-500/20 p-4 text-sm text-green-300">
+              <div className="rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">
                 Password reset email sent! Check your inbox and follow the link to reset your password.
               </div>
               <Link href="/login">
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0">
+                <Button className="w-full">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back to Login
                 </Button>
@@ -71,13 +71,13 @@ export default function ForgotPasswordPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               {error && (
-                <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-3 text-sm text-red-300">
+                <div className="rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-700">
                   {error}
                 </div>
               )}
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-white">
+                <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
                 <Input
@@ -87,20 +87,20 @@ export default function ForgotPasswordPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-white/5 border-white/20 text-white placeholder:text-gray-500"
+                  className="bg-white border-border"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0"
+                className="w-full"
                 disabled={loading}
               >
                 {loading ? "Sending..." : "Send Reset Link"}
               </Button>
 
               <div className="text-center">
-                <Link href="/login" className="text-sm text-blue-400 hover:text-blue-300 hover:underline">
+                <Link href="/login" className="text-sm text-primary hover:underline">
                   <ArrowLeft className="inline h-3 w-3 mr-1" />
                   Back to Login
                 </Link>

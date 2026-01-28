@@ -316,7 +316,7 @@ export default function QuizPage() {
 
                   <Button
                     onClick={startQuiz}
-                    className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0"
+                    className="w-full"
                     size="lg"
                     disabled={
                       selectedWordIds.length === 0 ||

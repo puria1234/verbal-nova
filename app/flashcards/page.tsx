@@ -79,11 +79,10 @@ export default function FlashcardsPage() {
         <NavBar />
 
         <main className="container mx-auto px-4 py-8">
-          <div className="mb-8 text-center">
-            <h1 className="mb-2 text-2xl sm:text-3xl font-bold text-balance bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              Flashcards
-            </h1>
-            <p className="text-sm sm:text-base text-muted-foreground">
+          <div className="mb-8 text-center space-y-3">
+            <p className="text-xs uppercase tracking-[0.25em] text-slate-500">Study deck</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-balance text-white">Flashcards</h1>
+            <p className="text-sm sm:text-base text-slate-400">
               Card {currentIndex + 1} of {words.length}
             </p>
           </div>
@@ -91,9 +90,9 @@ export default function FlashcardsPage() {
           <div className="flex flex-col items-center gap-6 sm:gap-8">
             <Flashcard word={currentWord} />
 
-            <div className="flex flex-col items-center gap-4 w-full max-w-md px-4">
+            <div className="flex flex-col items-center gap-4 w-full max-w-xl px-4">
               <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full">
-                <Button variant="outline" size="lg" onClick={() => handleKnown(false)} className="gap-2 w-full sm:w-auto">
+                <Button variant="secondary" size="lg" onClick={() => handleKnown(false)} className="gap-2 w-full sm:w-auto">
                   <X className="h-5 w-5" />
                   Don't Know
                 </Button>
